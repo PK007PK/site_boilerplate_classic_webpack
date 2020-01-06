@@ -1,0 +1,27 @@
+.temp-02-features {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  &__item {
+    flex-basis: 200px;
+    flex-grow: 1;
+    color: white;
+
+    &--1 {
+      background: $color-green;
+    }
+
+    &--2 {
+      background-color: darken($color-green, 3);
+    }
+
+    &--3 {
+      background-color: lighten($color-blue, 3);
+    }
+
+    &--4 {
+      background-color: $color-blue;
+    }
+  }
+}

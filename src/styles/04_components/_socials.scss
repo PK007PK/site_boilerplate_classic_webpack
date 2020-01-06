@@ -1,0 +1,8 @@
+.c-socials {
+  display: flex;
+
+  &__item {
+    @extend .u-text-hover;
+    margin-left: $grid-base;
+  }
+}

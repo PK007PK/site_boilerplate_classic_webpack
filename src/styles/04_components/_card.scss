@@ -1,0 +1,65 @@
+//Overwrite defaults
+$background-bar-color: white;
+
+//Default
+$background-bar-color: gray !default;
+$first-and-last-margin: 5rem !default;
+$inside-y-margins: 0.8rem !default;
+$inside-x-margins: 1rem !default;
+
+.c-card {
+  @include resp-y-padding($sm: 20px, $md: 20px);
+
+  &--bigpadding {
+    @include resp-y-padding();
+  }
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  & > * {
+    margin: $inside-y-margins $inside-x-margins;
+  }
+
+  &__ico {
+    margin: $inside-y-margins auto;
+  }
+
+  &__cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &--right &__cont {
+    flex-direction: row-reverse;
+  }
+
+  &__cont &__ico {
+    margin: $inside-y-margins 1rem $inside-y-margins 0;
+  }
+
+  &--right &__ico {
+    margin: $inside-y-margins 0 $inside-y-margins 1rem;
+  }
+
+  &__text {
+    &--left {
+      text-align: left;
+    }
+  }
+
+  &--right &__text {
+    text-align: right;
+  }
+
+  &__bar {
+    height: 0.3rem;
+    width: 7rem;
+    background-color: $background-bar-color;
+    border-radius: 10px;
+    margin: $inside-y-margins auto;
+  }
+}

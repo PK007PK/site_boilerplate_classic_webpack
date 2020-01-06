@@ -1,0 +1,33 @@
+.c-btn {
+  //Overwrite default values:
+
+  //Default values:
+  $btn-body-color: #ffffff !default;
+  $btn-body-background-color: #212121 !default;
+
+  $btn-paddings: 1rem 2.5rem !default;
+  $btn-font-size: 2rem !default;
+
+  $small-btn-paddings: 0.62rem 1.87rem !default;
+  $small-btn-font-size: 1.5rem !default;
+
+  //Btn effects:
+  @extend .u-shadow-hover-click-effect;
+
+  //Component body:
+  display: inline-block;
+  cursor: pointer;
+  padding: $btn-paddings;
+  font-size: $btn-font-size;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $btn-body-background-color;
+  color: $btn-body-color;
+
+  &--small {
+    padding: $small-btn-paddings;
+    font-size: $small-btn-font-size;
+  }
+}

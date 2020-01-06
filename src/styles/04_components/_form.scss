@@ -1,0 +1,16 @@
+.c-form {
+  &__input,
+  &__text-area {
+    display: block;
+    width: 100%;
+    background-color: $color-darkGray;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    color: $color-lightGray;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+  }
+  &__label {
+    display: none;
+  }
+}

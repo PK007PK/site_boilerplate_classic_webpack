@@ -1,0 +1,46 @@
+.temp-00-nav {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  max-height: 190px;
+  justify-content: center;
+
+  @include respond-above(md) {
+    height: 15vh;
+  }
+
+  @include respond-above(lg) {
+    height: 20vh;
+  }
+
+  &__cont1,
+  &__cont2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $grid-base;
+  }
+
+  .c-info {
+    display: none;
+
+    @include respond-above(md) {
+      display: flex;
+    }
+  }
+
+  .c-menu {
+    display: none;
+
+    @include respond-above(sm) {
+      display: flex;
+    }
+  }
+
+  .c-socials {
+    display: none;
+
+    @include respond-above(sm) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,606 @@
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  basic flex classes
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// .u-flex-col
+// .u-flex
+// .u-flex-row
+// .u-flex-wrap
+// .u-flex-nowrap
+// .u-flex-align-start
+// .u-flex-align-center
+// .u-flex-justifyC-start
+// .u-flex-justifyC-center
+// .u-flex-justifyC-space-betw
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex
+//  .u-flex--(xs sm md lg)-up
+//  .u-flex--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex {
+  display: flex;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      display: flex;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      display: flex;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      display: flex;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      display: flex;
+    }
+  }
+
+  &--xxl-up {
+    @include respond-above(xxl) {
+      display: flex;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      display: flex;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      display: flex;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      display: flex;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      display: flex;
+    }
+  }
+
+  &--xxl-down {
+    @include respond-below(xxl) {
+      display: flex;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-col
+//  .u-flex-col--(xs sm md lg)-up
+//  .u-flex-col--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-col {
+  flex-direction: column;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      flex-direction: column;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      flex-direction: column;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      flex-direction: column;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      flex-direction: column;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      flex-direction: column;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      flex-direction: column;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-row
+//  .u-flex-row--(xs sm md lg)-up
+//  .u-flex-row--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-row {
+  flex-direction: row;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      flex-direction: row;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      flex-direction: row;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      flex-direction: row;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      flex-direction: row;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      flex-direction: row;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      flex-direction: row;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      flex-direction: row;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-wrap
+//  .u-flex-wrap--(xs sm md lg)-up
+//  .u-flex-wrap--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-wrap {
+  flex-wrap: wrap;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  flex-nowrap
+//  flex-nowrap--(xs sm md lg)-up
+//  flex-nowrap--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-nowrap {
+  flex-wrap: nowrap;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-align-start
+//  .u-flex-align-start--(xs sm md lg)-up
+//  .u-flex-align-start--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-align-start {
+  align-items: flex-start;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      align-items: flex-start;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      align-items: flex-start;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      align-items: flex-start;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      align-items: flex-start;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      align-items: flex-start;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      align-items: flex-start;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      align-items: flex-start;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      align-items: flex-start;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-align-center
+//  .u-flex-align-center--(xs sm md lg)-up
+//  .u-flex-align-center--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-align-center {
+  align-items: center;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      align-items: center;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      align-items: center;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      align-items: center;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      align-items: center;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      align-items: center;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      align-items: center;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      align-items: center;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      align-items: center;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-justifyC-start
+//  .u-flex-justifyC-start--(xs sm md lg)-up
+//  .u-flex-justifyC-start--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-justifyC-start {
+  justify-content: flex-start;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      justify-content: flex-start;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      justify-content: flex-start;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      justify-content: flex-start;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      justify-content: flex-start;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      justify-content: flex-start;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      justify-content: flex-start;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-justifyC-center
+//  .u-flex-justifyC-center--(xs sm md lg)-up
+//  .u-flex-justifyC-center--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-justifyC-center {
+  justify-content: center;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      justify-content: center;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      justify-content: center;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      justify-content: center;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      justify-content: center;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      justify-content: center;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      justify-content: center;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      justify-content: center;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      justify-content: center;
+    }
+  }
+}
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex-justifyC-spa-betw
+//  .u-flex-justifyC-spa-betw--(xs sm md lg)-up
+//  .u-flex-justifyC-spa-betw--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.u-flex-justifyC-spa-betw {
+  justify-content: space-between;
+
+  &--xs-up {
+    @include respond-above(xs) {
+      justify-content: space-between;
+    }
+  }
+
+  &--sm-up {
+    @include respond-above(sm) {
+      justify-content: space-between;
+    }
+  }
+
+  &--md-up {
+    @include respond-above(md) {
+      justify-content: space-between;
+    }
+  }
+
+  &--lg-up {
+    @include respond-above(lg) {
+      justify-content: space-between;
+    }
+  }
+
+  &--xs-down {
+    @include respond-below(xs) {
+      justify-content: space-between;
+    }
+  }
+
+  &--sm-down {
+    @include respond-below(sm) {
+      justify-content: space-between;
+    }
+  }
+
+  &--md-down {
+    @include respond-below(md) {
+      justify-content: space-between;
+    }
+  }
+
+  &--lg-down {
+    @include respond-below(lg) {
+      justify-content: space-between;
+    }
+  }
+}

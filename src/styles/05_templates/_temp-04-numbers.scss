@@ -1,0 +1,25 @@
+.temp-04-numbers {
+  @extend %resp-section-padding;
+  background-color: $color-blue;
+
+  @include respond-above(xs) {
+    background-image: url(images/images/backgr3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    color: $color-white;
+
+    @include respond-above(xs) {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    flex-basis: 200px;
+  }
+}

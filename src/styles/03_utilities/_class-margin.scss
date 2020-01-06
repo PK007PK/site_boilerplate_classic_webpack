@@ -1,0 +1,129 @@
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Creat
+//      .u-u-marg--(0 to 200, step 5)
+//      .u-marg--(xs sm md lg xxl)-(0 to 200)
+
+//      .u-marg-x--(0 to 200)
+//      .u-marg-x--(xs sm md lg xxl) -(0 to 200)
+
+//      .u-marg-y--(0 to 200)
+//      .u-marg-y--(xs sm md lg xxl) -(0 to 200)
+
+//      .u-marg-t--(0 to 200)
+//      .u-marg-t--(xs sm md lg xxl) -(0 to 200)
+
+//      .u-marg-b--(0 to 200)
+//      .u-marg-b--(xs sm md lg xxl) -(0 to 200)
+
+//      .u-marg-l--(0 to 200)
+//      .u-marg-l--(xs sm md lg xxl) -(0 to 200)
+
+//      .u-marg-r--(0 to 200)
+//      .u-marg-r--(xs sm md lg xxl) -(0 to 200)
+//––––––––––––––––––––––––––––––––––––––––––––––––
+
+@mixin create_margins_classes {
+  $value: 0;
+
+  @for $i from 1 through 41 {
+    .u-marg--#{$value} {
+      margin: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-marg--#{$key}-#{$value} {
+        @include respond-above($key) {
+          margin: #{$value}px !important;
+        }
+      }
+    }
+
+    // Horizontal.
+
+    .u-marg-x--#{$value} {
+      margin: 0 #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-marg-x--#{$key}-#{$value} {
+        @include respond-above($key) {
+          margin: 0 #{$value}px !important;
+        }
+      }
+    }
+
+    // Vertical.
+
+    .u-marg-y--#{$value} {
+      margin: #{$value}px 0;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-margin-y--#{$key}-#{$value} {
+        @include respond-above($key) {
+          margin: #{$value}px 0 !important;
+        }
+      }
+    }
+
+    // Top.
+
+    .u-marg-t--#{$value} {
+      margin-top: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-marg-t--#{$key}-#{$value} {
+        @include respond-above($key) {
+          margin-top: #{$value}px !important;
+        }
+      }
+    }
+
+    // Bottom.
+
+    .u-marg-b--#{$value} {
+      margin-bottom: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-marg-b--#{$key}-#{$value} {
+        @include respond-above($key) {
+          margin-bottom: #{$value}px !important;
+        }
+      }
+    }
+
+    // Left.
+
+    .u-marg-l--#{$value} {
+      margin-left: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-marg-l--#{$key}-#{$value} {
+        @include respond-above($key) {
+          margin-left: #{$value}px !important;
+        }
+      }
+    }
+
+    // Right.
+
+    .u-marg-r--#{$value} {
+      margin-right: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-marg-r--#{$key}-#{$value} {
+        @include respond-above($key) {
+          margin-right: #{$value}px !important;
+        }
+      }
+    }
+
+    $value: $value + 5;
+  }
+}
+
+@include create_margins_classes;

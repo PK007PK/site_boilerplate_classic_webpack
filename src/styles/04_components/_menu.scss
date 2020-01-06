@@ -1,0 +1,15 @@
+.c-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    text-transform: uppercase;
+    margin-left: $grid-base;
+    position: relative;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+}

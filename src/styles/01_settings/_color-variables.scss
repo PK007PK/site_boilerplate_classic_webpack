@@ -1,0 +1,18 @@
+//Colors
+$color-black: rgb(0, 0, 0);
+$color-darkGray: rgb(23, 23, 23);
+$color-gray: rgb(111, 111, 110);
+$color-lightGray: rgb(226, 226, 226);
+$color-white: rgb(254, 254, 254);
+$color-blue: rgb(25, 155, 219);
+$color-green: rgb(55, 195, 167);
+
+$colors: (
+  "color-black": $color-black,
+  "color-darkGray": $color-darkGray,
+  "color-gray": $color-gray,
+  "color-lightGray": $color-lightGray,
+  "color-white": $color-white,
+  "color-blue": $color-blue,
+  "color-green": $color-green
+);

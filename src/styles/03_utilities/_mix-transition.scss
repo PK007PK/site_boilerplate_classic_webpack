@@ -1,0 +1,10 @@
+$default-transition: all 1s !default;
+$default-taiming: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
+
+@mixin transition(
+  $transition: $default-transition,
+  $transition-timing-function: $default-taiming
+) {
+  transition: $transition;
+  transition-timing-function: $transition-timing-function;
+}

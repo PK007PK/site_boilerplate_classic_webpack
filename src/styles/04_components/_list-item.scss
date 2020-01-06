@@ -1,0 +1,24 @@
+.c-list-item {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+
+  .c-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  &__picture {
+    margin: 0 1rem 0 0;
+  }
+
+  &__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+  }
+
+  &__text {
+    margin: 0.5rem 0;
+  }
+}

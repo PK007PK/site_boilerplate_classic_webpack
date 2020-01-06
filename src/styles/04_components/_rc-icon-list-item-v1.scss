@@ -1,0 +1,13 @@
+.c-icon-list-item {
+  //Overwrite default values:
+
+  //Default values:
+  $icon-list-item-image: '/DefaultAssets/arrowblue.png' !default;
+
+  //Component body:
+  list-style-image: $icon-list-item-image;
+
+  &__item {
+    padding: 5px 0;
+  }
+}

@@ -1,0 +1,13 @@
+$default-height: 100vh;
+$default-min-height: 500px;
+$default-max-height: 800px;
+
+@mixin section-height(
+  $height: $default-height,
+  $min-height: $default-min-height,
+  $max-height: $default-max-height
+) {
+  height: $height;
+  min-height: $min-height;
+  max-height: $max-height;
+}

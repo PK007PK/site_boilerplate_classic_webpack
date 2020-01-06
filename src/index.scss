@@ -1,0 +1,12 @@
+// Normalize
+@import '~normalize.css/normalize.css';
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+// SASS files
+@import 'styles/01_settings/_01_settings.scss';
+@import 'styles/02_generic/_02_generic.scss';
+@import 'styles/03_utilities/_03_utilities.scss';
+@import 'styles/04_components/_04_components.scss';
+@import 'styles/05_templates/_05_templates.scss';

@@ -1,0 +1,74 @@
+.c-accordion {
+  //Overwrite default values:
+
+  //Default values:
+  $accordion-body-color: #eeeeee !default;
+  $accordion-body-background-color: #212121 !default;
+  $accordion-body-active-color: black !default;
+  $accordion-body-active-background-color: #eeeeee !default;
+
+  $accordion-icon-background-color: #b4a6a6 !default;
+  $accordion-icon-symbol: 'images/DefaultComponentsAssets/arrow.png' !default;
+  $accordion-icon-active-background-color: #df7878 !default;
+
+  //Component body:
+  @extend %transition;
+  @extend .u-shadow-hover-click-effect;
+  position: relative;
+
+  padding: 1.2rem 0 1.2rem 5rem;
+  border-radius: 50px;
+  max-width: 340px;
+
+  background-color: $accordion-body-background-color;
+  color: $accordion-body-color;
+
+  //Accordion icon:
+  &::before {
+    @extend %transition;
+    content: '';
+    position: absolute;
+
+    top: 50%;
+    left: 4px;
+    width: 35px;
+    height: 35px;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+
+    background-image: url($accordion-icon-symbol);
+    background-size: 20%;
+    background-position: center;
+
+    background-repeat: no-repeat;
+    background-color: $accordion-icon-background-color;
+  }
+
+  //Accordion hover:
+  &:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+
+    //Icon hover:
+    &::before {
+      transform: translate(0, -50%) rotate(90deg);
+    }
+  }
+
+  //Accordion active:
+  &--active {
+    background-color: $accordion-body-active-background-color;
+    color: $accordion-body-active-color;
+
+    //Accordion active icon:
+    &::before {
+      transform: translate(0, -50%) rotate(90deg);
+      background-color: $accordion-icon-active-background-color;
+    }
+
+    &:hover {
+      &::before {
+        // transform: translate(0, -50%) rotate(0deg);
+      }
+    }
+  }
+}

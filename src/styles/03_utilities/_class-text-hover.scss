@@ -1,0 +1,9 @@
+$default-text-hover-color: green !default;
+
+.u-text-hover {
+  @extend %transition;
+
+  &:hover {
+    color: $default-text-hover-color;
+  }
+}

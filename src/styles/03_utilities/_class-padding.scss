@@ -1,0 +1,116 @@
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  Create:
+//      .u-padd u-padd--(xs sm md lg)--(0 to 41)
+//      .u-padd-x u-padd-x--(xs sm md lg) --(0 to 41)
+//      .u-padd-y u-padd-y--(xs sm md lg) --(0 to 41)
+//      .u-padd-t u-padd-t--(xs sm md lg) --(0 to 41)
+//      .u-padd-b u-padd-b--(xs sm md lg) --(0 to 41)
+//      .u-padd-l u-padd-l--(xs sm md lg) --(0 to 41)
+//      .u-padd-r u-padd-r--(xs sm md lg) --(0 to 41)
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@mixin create_paddings_classes {
+  $value: 0;
+
+  @for $i from 1 through 41 {
+    .u-padd--#{$value} {
+      padding: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-padd--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding: #{$value}px !important;
+        }
+      }
+    }
+
+    // Horizontal.
+
+    .u-padd-x--#{$value} {
+      padding: 0 #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-padd-x--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding: 0 #{$value}px !important;
+        }
+      }
+    }
+
+    // Vertical.
+
+    .u-padd-y--#{$value} {
+      padding: #{$value}px 0;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-padd-y--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding: #{$value}px 0 !important;
+        }
+      }
+    }
+
+    // Top.
+
+    .u-padd-t--#{$value} {
+      padding-top: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-padd-t--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding-top: #{$value}px !important;
+        }
+      }
+    }
+
+    // Bottom.
+
+    .u-padd-b--#{$value} {
+      padding-bottom: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-padd-b--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding-bottom: #{$value}px !important;
+        }
+      }
+    }
+
+    // Left.
+
+    .u-padd-l--#{$value} {
+      padding-left: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-padd-l--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding-left: #{$value}px !important;
+        }
+      }
+    }
+
+    // Right.
+
+    .u-padd-r--#{$value} {
+      padding-right: #{$value}px;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-padd-r--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding-right: #{$value}px !important;
+        }
+      }
+    }
+
+    $value: $value + 5;
+  }
+}
+
+@include create_paddings_classes;
