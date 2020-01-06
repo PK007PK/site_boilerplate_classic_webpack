@@ -1,3 +1,23 @@
+@mixin makeFontSizes {
+  @each $name, $size in $font-sizes {
+    .#{$name} {
+      font-size: $size !important;
+    }
+  }
+}
+
+@include makeFontSizes;
+
+@mixin makeFontWeights {
+  @each $name, $weight in $font-weights {
+    .#{$name} {
+      font-weight: $weight !important;
+    }
+  }
+}
+
+@include makeFontWeights;
+
 .u-text-center {
   text-align: center;
 }
@@ -16,20 +36,4 @@
 
 .u-text-bold {
   font-weight: bold;
-}
-
-.u-text-small {
-  font-size: $font-size-small;
-}
-
-.u-text-medium {
-  font-size: $font-size-medium;
-}
-
-.u-text-big {
-  font-size: $font-size-big;
-}
-
-.u-text-xxl {
-  font-size: $font-size-xxl;
 }

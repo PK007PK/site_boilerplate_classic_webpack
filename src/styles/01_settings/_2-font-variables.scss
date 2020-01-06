@@ -1,19 +1,27 @@
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 $main-font: ('Roboto', sans-serif);
-$font-size-base: 1rem;
-$font-size-small: 1rem;
-$font-size-medium: 1.6rem;
-$font-size-big: 2rem;
-$font-size-xxl: 3rem;
 
-$line-height-base: 1.5;
-$line-height-sm: 1.2;
-$line-height-lg: 1.8;
+$font-size-small: 1.4rem;
+$font-size-base: 1.6rem; //include in body
+$font-size-24: 2.4rem;
+$font-size-36: 3.6rem;
+$font-size-46: 4.6rem;
+
+$font-sizes: (
+  'font-size-small': $font-size-small,
+  'font-size-base': $font-size-base,
+  'font-size-24': $font-size-24,
+  'font-size-36': $font-size-36,
+  'font-size-46': $font-size-46,
+);
+
+$font-weight-base: 400; //Include in body
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+
+$font-weights: (
+  'font-weight-300': $font-weight-300,
+  'font-weight-400': $font-weight-400,
+  'font-weight-500': $font-weight-500,
+);
