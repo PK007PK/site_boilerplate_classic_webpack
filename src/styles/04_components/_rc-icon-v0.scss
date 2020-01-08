@@ -1,0 +1,13 @@
+//Use fontello
+
+.c-icon {
+  //Overwrite variables
+
+  //Default variables
+  $icon-font-size: 2rem !default;
+  $icon-line-height: 1.5 !default;
+
+  //Component body
+  font-size: $icon-font-size;
+  line-height: $icon-line-height;
+}

@@ -1,6 +1,6 @@
 @mixin makeFontSizes {
   @each $name, $size in $font-sizes {
-    .#{$name} {
+    .u-#{$name} {
       font-size: $size !important;
     }
   }
@@ -10,7 +10,7 @@
 
 @mixin makeFontWeights {
   @each $name, $weight in $font-weights {
-    .#{$name} {
+    .u-#{$name} {
       font-weight: $weight !important;
     }
   }
