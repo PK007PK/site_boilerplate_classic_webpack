@@ -1,0 +1,67 @@
+.c-social-menu {
+  //Overwrite variables
+  $icon-background-color: $color-gray;
+  $text-color: $color-grayBlack;
+
+  //Default variables
+  $grid-base: 10px !default;
+  $icon-color: white !default;
+  $icon-size: 1.7rem !default;
+  $icon-background-color: gray !default;
+  $icon-background-size: 40px !default;
+  $icon-margin: $grid-base * 3 !default;
+  $text-color: gray !default;
+  $background-color: white !default;
+
+  //Component body
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  background-color: $background-color;
+
+  i {
+    @extend %transition;
+    color: $icon-color;
+    background-color: $icon-background-color;
+    margin: 0 $icon-margin;
+    width: $icon-background-size;
+    height: $icon-background-size;
+    font-size: $icon-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    position: relative;
+
+    &:hover.darkBlue {
+      background-color: $color-darkBlue;
+    }
+
+    &:hover.lightBlue {
+      background-color: $color-lightBlue;
+    }
+
+    &:hover.red {
+      background-color: $color-gplus;
+    }
+
+    &:hover.orange {
+      background-color: orange;
+    }
+
+    &:hover.darkRed {
+      background-color: #720606;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+
+  span {
+    color: $text-color;
+  }
+}

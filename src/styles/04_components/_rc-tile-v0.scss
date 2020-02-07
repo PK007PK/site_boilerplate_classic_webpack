@@ -1,0 +1,50 @@
+.c-tile {
+  //Overwrite variables
+
+  //Default variables
+  $grid-base: 10px !default;
+  $tile-padding: $grid-base * 2 !default;
+
+  //Component body
+  padding: $tile-padding;
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.c-news-tile {
+  p,
+  h3 {
+    margin: 0;
+    font-weight: 200;
+    font-size: $font-size-base;
+  }
+
+  &__title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: $grid-base * 2 $grid-base * 3;
+    border-bottom: 1px solid #80d6fa;
+  }
+
+  &__text {
+  }
+
+  &__hour {
+    margin-top: 30px;
+  }
+
+  &__container {
+    padding: $grid-base * 2 $grid-base * 3;
+    border-bottom: 1px solid #80d6fa;
+    line-height: 1.5;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

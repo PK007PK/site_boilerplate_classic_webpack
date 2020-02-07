@@ -1,0 +1,62 @@
+.c-tile-news-icon {
+  //Overwrite variables
+
+  //Default variables
+  $grid-base: 10px !default;
+  $component-padding: 50px !default;
+  $component-min-height: 250px !default;
+  $body-color: white !default;
+
+  $distance-from-top: 43px !default;
+  $iconBox-size: $distance-from-top !default;
+
+  $icon-color: white !default;
+  $icon-background: red !default;
+  $icon-size: 12px !default;
+
+  $heading-weight: $font-weight-400 !default;
+  $text-weight: $font-weight-300 !default;
+
+  //Component body
+  // position: relative;
+  padding: $distance-from-top $component-padding;
+  background-color: $body-color;
+  font-weight: $text-weight;
+  min-height: $component-min-height;
+  height: 100%;
+
+  &__iconBox {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: $distance-from-top;
+    color: $icon-color;
+    background-color: $icon-background;
+    font-size: $icon-size;
+    width: $iconBox-size;
+    height: $iconBox-size;
+  }
+
+  &__heading {
+    margin: 0;
+    font-weight: $heading-weight;
+  }
+
+  &__date {
+    display: inline-block;
+    margin: $grid-base 0;
+    font-weight: $font-weight-200;
+    color: $color-gray;
+  }
+
+  &__paragraph {
+    margin: 0;
+    line-height: 24px;
+  }
+
+  &__link {
+    color: red;
+  }
+}

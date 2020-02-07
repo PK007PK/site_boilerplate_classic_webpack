@@ -1,0 +1,16 @@
+.c-vertical-bar {
+  //Overwrite variables
+  $bar-color: $color-lightGray;
+
+  //Default variables
+  $bar-size: 2px !default;
+  $bar-color: #4b515d !default;
+
+  //Component body
+  display: block;
+  height: 90%;
+  width: $bar-size;
+  background-color: $bar-color;
+  border-radius: 5px;
+  margin: 5px 0;
+}

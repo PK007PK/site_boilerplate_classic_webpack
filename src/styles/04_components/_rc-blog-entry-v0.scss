@@ -1,0 +1,67 @@
+.c-blog-entry {
+  //Overwrite variables:
+
+  //Default main variables:
+  $grid-base: 10px !default;
+
+  $blog-entry--title--font-weight: bold !default;
+  $blog-entry--title--font-size: $grid-base * 2 !default;
+
+  $blog-entry--text--font-size: $grid-base * 1.6 !default;
+  $blog-entry--text--font-weight: normal !default;
+
+  //Default local variables:
+  $blog-entry--main--padding: $grid-base !default;
+  $blog-entry--img--size: 75px !default;
+  $blog-entry--img-from-text: $grid-base !default;
+  $blog-entry--title-from-text: $grid-base !default;
+
+  //Component body:
+  display: flex;
+  align-items: center;
+  padding: $blog-entry--main--padding;
+
+  &__title {
+    font-size: $blog-entry--title--font-size;
+    font-weight: $blog-entry--title--font-weight;
+    margin-bottom: $blog-entry--title-from-text;
+  }
+
+  &__text {
+    font-size: $blog-entry--text--font-size;
+    font-weight: $blog-entry--text--font-weight;
+  }
+
+  &__img {
+    width: $blog-entry--img--size;
+    height: $blog-entry--img--size;
+    flex-shrink: 0;
+  }
+
+  &__container {
+    margin-left: $blog-entry--img-from-text;
+
+    & > * {
+      margin: 0;
+    }
+  }
+}
+
+/*
+
+<div class="c-blog-entry">
+  <img
+    loading="lazy"
+    data-sizes="auto"
+    class="c-blog-entry__img lazyload"
+    src="/src/images/images/placeholder1x1.png"
+    srcset="/src/images/images/placeholder1x1.png"
+    data-srcset="/src/images/images/placeholder1x1.png 300w"
+  />
+  <div class="c-blog-entry__container">
+    <h3 class="c-blog-entry__title">A New Yorker doesn't necessarily come from...</h3>
+    <p class="c-blog-entry__text">2 minutes ago</p>
+  </div>
+</div>
+
+*/

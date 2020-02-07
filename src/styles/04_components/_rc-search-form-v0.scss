@@ -1,0 +1,28 @@
+.c-search-form {
+  // Overvrite defaults
+
+  // Default variables
+  $icon-size: 15px !default;
+  $input-width: 16rem !default;
+  $form-padding: $grid-base * 2 !default;
+  $component-width: ($input-width + $form-padding * 4) !default;
+
+  // Component body
+  display: flex;
+  justify-content: space-between;
+  width: $component-width;
+  padding: 0 $form-padding;
+
+  &__btn {
+    background-color: inherit;
+    border: none;
+    font-size: $icon-size;
+    padding: 0;
+  }
+
+  &__field {
+    display: block;
+    width: $input-width;
+    padding: $grid-base/2;
+  }
+}

@@ -1,0 +1,12 @@
+.c-icon-list {
+  //Overwrite default values:
+
+  //Default values:
+  $icon: '/images/DefaultComponentsAssets/arrowblue.png' !default;
+
+  //Component body:
+  list-style-image: url($icon);
+
+  &__item {
+  }
+}

@@ -1,0 +1,134 @@
+.c-tab {
+  //Overwrite variables
+  $button-text-color: white;
+  $button-background-color: $color-gray;
+  $button-background-active-color: white;
+  $button-text-active-color: black;
+  $content-background-color: white;
+  $content-text-color: $color-stellBlue;
+
+  //Component default variables
+  $max-tab-width: 100%;
+  $button-y-padding: 15px;
+  $button-x-padding: 25px;
+  $border-style: 1px solid black !default;
+
+  $button-text-color: black !default;
+  $button-text-hover-color: white !default;
+  $button-text-active-color: purple !default;
+
+  $button-background-color: lightgray !default;
+  $button-background-hover-color: red !default;
+  $button-background-active-color: pink !default;
+
+  $button-transition-style: 0.5s !default;
+  $content-padding: 10px !default;
+
+  $content-text-color: $button-text-color !default;
+  $content-background-color: $button-background-color !default;
+
+  //Component body
+  width: 100%;
+  max-width: $max-tab-width;
+
+  &__handler,
+  &__content-item {
+    display: none;
+  }
+
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    //
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+    li {
+      flex-basis: 120px;
+      flex-grow: 1;
+    }
+  }
+
+  &__nav-item {
+    //
+
+    display: block;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+
+    &:focus {
+      color: $button-text-active-color;
+    }
+
+    // float: left;
+    padding: $button-y-padding $button-x-padding;
+    border: $border-style;
+    border-bottom: 0;
+    color: $button-text-color;
+    background-color: $button-background-color;
+    transition: $button-transition-style;
+
+    &:hover {
+      color: $button-text-hover-color;
+      background-color: $button-background-hover-color;
+    }
+
+    &:active {
+      color: $button-text-active-color;
+      background-color: $button-background-active-color;
+    }
+
+    li:not(:last-child) & {
+      border-right-width: 0;
+    }
+  }
+
+  &__content {
+    clear: both;
+  }
+
+  &__content-item {
+    padding: $content-padding;
+    width: 100%;
+    border: $border-style;
+    color: $content-text-color;
+    background-color: $content-background-color;
+  }
+
+  #tab1:checked ~ .c-tab__content .c-tab__content-item--tab1,
+  #tab2:checked ~ .c-tab__content .c-tab__content-item--tab2,
+  #tab3:checked ~ .c-tab__content .c-tab__content-item--tab3,
+  #tab4:checked ~ .c-tab__content .c-tab__content-item--tab4,
+  #tab5:checked ~ .c-tab__content .c-tab__content-item--tab5 {
+    display: block;
+  }
+
+  #tab1:checked ~ nav .c-tab__nav-item--1,
+  #tab2:checked ~ nav .c-tab__nav-item--2,
+  #tab3:checked ~ nav .c-tab__nav-item--3,
+  #tab4:checked ~ nav .c-tab__nav-item--4,
+  #tab5:checked ~ nav .c-tab__nav-item--5 {
+    color: $button-text-active-color;
+    background-color: $button-background-active-color;
+    position: relative;
+  }
+
+  #tab1:checked ~ nav .c-tab__nav-item--1:after,
+  #tab2:checked ~ nav .c-tab__nav-item--2:after,
+  #tab3:checked ~ nav .c-tab__nav-item--3:after,
+  #tab4:checked ~ nav .c-tab__nav-item--4:after,
+  #tab5:checked ~ nav .c-tab__nav-item--5:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $button-background-active-color;
+    left: 0;
+    bottom: -1px;
+  }
+}

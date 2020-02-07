@@ -1,0 +1,37 @@
+.c-textarea {
+  //Overwrite variables:
+  $text-color: 'inherit';
+
+  //Default variables:
+  $components-height: 150px !default;
+  $component-paddings: 10px 20px !default;
+
+  $component-color: white !default;
+  $component-active-color: lightblue !default;
+  $text-color: black !default;
+
+  //Component body:
+  width: 100%;
+  margin: 0;
+  display: block;
+  height: $components-height;
+  padding: $component-paddings;
+  background-color: $component-color;
+  color: $text-color;
+  cursor: pointer;
+
+  &:focus {
+    background-color: $component-active-color;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &::placeholder {
+    color: $text-color;
+    @include respond-below(md) {
+      text-align: center;
+    }
+  }
+}

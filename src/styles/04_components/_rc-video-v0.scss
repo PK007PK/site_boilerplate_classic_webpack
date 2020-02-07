@@ -1,0 +1,48 @@
+.c-video {
+  //Overwrite variables
+  $component-background: $color-darkBlue;
+  //Default variables
+  // $minimum-control-width: 80px !default;
+  $icon-size: 30px !default;
+  $component-background: blue !default;
+  $component-text-color: white !default;
+  overflow: hidden !important;
+  position: relative;
+  //Component body
+  display: flex;
+  flex-direction: column;
+  background-color: $component-background;
+  width: 100%;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+  }
+
+  &__controls {
+    flex-grow: 2;
+    display: flex;
+    min-width: 110px;
+    justify-content: space-around;
+
+    @include respond-above(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $component-text-color;
+    margin: $grid-base;
+
+    & i {
+      margin-bottom: $grid-base;
+      font-size: $icon-size;
+    }
+  }
+
+  &__frame {
+    flex-grow: 1;
+  }
+}

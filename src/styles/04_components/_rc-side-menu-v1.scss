@@ -1,0 +1,75 @@
+.c-side-menu {
+  //Overwrite variables
+  $component-color: white;
+  $component-text-color: $color-grayBlack;
+  $component-active-text-color: white;
+  $component-active-color: $color-lightGreen;
+  $icon-color: $color-darkGray;
+
+  //Default variables
+  $grid-base: 10px !default;
+  $item-height: 62px !default;
+
+  $icon-size: $grid-base * 2 !default;
+  $icon-distance-from-left: $grid-base * 2 !default;
+  $icon-color: yellow !default;
+  $icon-text-distance: $grid-base !important;
+
+  $component-color: black !default;
+  $component-text-color: white !default;
+  $component-text-weight: normal !default;
+  $component-active-color: red !default;
+  $component-active-text-color: blue !default;
+
+  //Component body
+  color: $component-text-color;
+  background-color: $component-color;
+  font-weight: $component-text-weight;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid gray;
+    padding: 0 $icon-distance-from-left;
+    height: $item-height;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $component-active-text-color;
+      background-color: $component-active-color;
+
+      i {
+        transition: all 0.4s;
+        color: $component-active-text-color;
+        background-color: $component-active-color;
+      }
+    }
+
+    i {
+      color: $icon-color;
+      font-size: $icon-size;
+      margin-right: $icon-text-distance;
+    }
+
+    &--active {
+      color: $component-active-text-color;
+      background-color: $component-active-color;
+
+      i {
+        color: $component-active-text-color;
+        background-color: $component-active-color;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+
+      &:focus {
+      }
+    }
+  }
+}

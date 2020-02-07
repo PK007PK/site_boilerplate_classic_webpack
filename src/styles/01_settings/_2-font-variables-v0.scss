@@ -40,13 +40,18 @@ $font-weights: (
   'font-weight-500': $font-weight-500,
 );
 
-//Headings
+// ** Headings
 // $h1-font-size:
 // $h2-font-size:
 // $h3-font-size:
 // $h4-font-size:
-
 // $h1-font-weight:
 // $h2-font-weight:
 // $h3-font-weight:
 // $h4-font-weight:
+
+// ** c-blog-entry
+// $blog-entry--title--font-size: $grid-base * 2;
+// $blog-entry--title--font-weight: bold;
+// $blog-entry--text--font-size: $grid-base * 1.6;
+// $blog-entry--text--font-weight: normal;

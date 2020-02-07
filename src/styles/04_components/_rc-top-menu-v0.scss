@@ -1,0 +1,34 @@
+.c-top-menu {
+  //Overwrite variables
+
+  //Default variables
+  $grid-base: 10px !default;
+  $component-padding: $grid-base * 3 !default;
+  $item-margin: $grid-base $grid-base * 3 !default;
+
+  //Component body
+  display: flex;
+  flex-direction: column;
+  padding: 0 $component-padding;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+  }
+
+  &__item {
+    @extend %transition;
+    margin: $item-margin;
+
+    &:hover {
+      color: $color-lightGreen;
+    }
+
+    &--active {
+      color: $color-lightGreen;
+    }
+
+    a {
+      padding: 5px;
+    }
+  }
+}
