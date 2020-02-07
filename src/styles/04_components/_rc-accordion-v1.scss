@@ -1,15 +1,17 @@
 .c-accordion {
   //Overwrite default values:
 
-  //Default values:
-  $accordion-body-color: #eeeeee !default;
-  $accordion-body-background-color: #212121 !default;
-  $accordion-body-active-color: black !default;
-  $accordion-body-active-background-color: #eeeeee !default;
+  //Default main variables:
+  $accordion--body--color: #eeeeee !default;
+  $accordion--body--background-color: #212121 !default;
+  $accordion--body--active-color: black !default;
+  $accordion--body--active-background-color: #eeeeee !default;
 
-  $accordion-icon-background-color: #b4a6a6 !default;
-  $accordion-icon-symbol: 'images/DefaultComponentsAssets/arrow.png' !default;
-  $accordion-icon-active-background-color: #df7878 !default;
+  $accordion--icon--background-color: #b4a6a6 !default;
+  $accordion--icon--active-background-color: #df7878 !default;
+
+  //Default local variables:
+  $accordion--icon--symbol: 'images/DefaultComponentsAssets/arrow.png' !default;
 
   //Component body:
   @extend %transition;
@@ -20,8 +22,8 @@
   border-radius: 50px;
   max-width: 340px;
 
-  background-color: $accordion-body-background-color;
-  color: $accordion-body-color;
+  background-color: $accordion--body--background-color;
+  color: $accordion--body--color;
 
   //Accordion icon:
   &::before {
@@ -36,12 +38,12 @@
     transform: translate(0, -50%);
     border-radius: 20px;
 
-    background-image: url($accordion-icon-symbol);
+    background-image: url($accordion--icon--symbol);
     background-size: 20%;
     background-position: center;
 
     background-repeat: no-repeat;
-    background-color: $accordion-icon-background-color;
+    background-color: $accordion--icon--background-color;
   }
 
   //Accordion hover:
@@ -56,13 +58,13 @@
 
   //Accordion active:
   &--active {
-    background-color: $accordion-body-active-background-color;
-    color: $accordion-body-active-color;
+    background-color: $accordion--body--active-background-color;
+    color: $accordion--body--active-color;
 
     //Accordion active icon:
     &::before {
       transform: translate(0, -50%) rotate(90deg);
-      background-color: $accordion-icon-active-background-color;
+      background-color: $accordion--icon--active-background-color;
     }
 
     &:hover {
