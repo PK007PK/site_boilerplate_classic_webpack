@@ -1,12 +1,53 @@
-$small: 50px;
-$medium: 100px;
+/* Usage
+    @include resp-y-padding;
+    @include resp-y-padding(sm: "100px"); ???
+    @extend resp-y-padding because of _%resp-section-padding.scss exist
+*/
 
-@mixin resp-y-padding($sm: $small, $md: $medium) {
-  padding-top: $sm;
-  padding-bottom: $sm;
+/**** Overwrite default variables and custom projekt stylling ****/
+
+/**** Default properties ****/
+$tiny-paddings: 50px !default;
+$xs-paddings: $tiny-paddings !default;
+$sm-paddings: 80px !default;
+$md-paddings: $sm-paddings !default;
+$lg-paddings: 100px !default;
+$xxl-paddings: $lg-paddings !default;
+
+/**** Core component ****/
+@mixin resp-y-padding(
+  $tiny: $tiny-paddings,
+  $xs: $xs-paddings,
+  $sm: $sm-paddings,
+  $md: $md-paddings,
+  $lg: $lg-paddings,
+  $xxl: $xxl-paddings
+) {
+  padding-top: $tiny;
+  padding-bottom: $tiny;
+
+  @include respond-above(xs) {
+    padding-top: $xs;
+    padding-bottom: $xs;
+  }
+
+  @include respond-above(sm) {
+    padding-top: $sm;
+    padding-bottom: $sm;
+  }
 
   @include respond-above(md) {
     padding-top: $md;
     padding-bottom: $md;
+  }
+
+  @include respond-above(lg) {
+    padding-top: $lg;
+    padding-bottom: $lg;
+  }
+
+  @include respond-above(xxl) {
+    padding-top: $xxl;
+    padding-bottom: $xxl;
   }
 }

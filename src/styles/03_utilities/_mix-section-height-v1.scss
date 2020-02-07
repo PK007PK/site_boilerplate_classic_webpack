@@ -1,11 +1,18 @@
-$default-height: 100vh;
-$default-min-height: 500px;
-$default-max-height: 800px;
+// ?? Do przetestowania czy napewno dobrze działa
+// Mixina do wykorzystania w temlatach w kombinacji z media jeżeli trzeba.
 
+/**** Overwrite default variables and custom projekt stylling ****/
+
+/**** Default properties ****/
+$default-section-height: 100vh !default;
+$default-section-min-height: 500px !default;
+$default-section-max-height: 800px !default;
+
+/**** Core component ****/
 @mixin section-height(
-  $height: $default-height,
-  $min-height: $default-min-height,
-  $max-height: $default-max-height
+  $height: $default-section-height,
+  $min-height: $default-section-min-height,
+  $max-height: $default-section-max-height
 ) {
   height: $height;
   min-height: $min-height;
