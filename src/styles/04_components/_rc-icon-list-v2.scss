@@ -2,11 +2,12 @@
   //Overwrite default values:
 
   //Default values:
-  $icon: '/images/DefaultComponentsAssets/arrowblue.png' !default;
+  $icon: 'images/DefaultComponentsAssets/arrowblue.png' !default;
 
   //Component body:
   list-style-image: url($icon);
 
   &__item {
+    line-height: 1.5;
   }
 }
