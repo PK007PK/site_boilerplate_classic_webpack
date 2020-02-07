@@ -1,0 +1,11 @@
+// Prepare clases with font sizes
+
+@mixin makeFontSizes {
+  @each $name, $size in $font-sizes {
+    .u-#{$name} {
+      font-size: $size !important;
+    }
+  }
+}
+
+@include makeFontSizes;
