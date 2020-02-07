@@ -5,15 +5,14 @@
 /**** Default system variables ****/
 
 // Grid
-$grid-base: 1rem !default;
-$tiles-margin: $grid-base * 1.5 !default;
+$grid-base: 1rem;
 
 // Breakpoints
-$xs-break: 576px !default;
-$sm-break: 768px !default;
-$md-break: 992px !default;
-$lg-break: 1200px !default;
-$xxl-break: 2000px !default;
+$xs-break: 576px;
+$sm-break: 768px;
+$md-break: 992px;
+$lg-break: 1200px;
+$xxl-break: 2000px;
 
 // Map of breakpoints.
 $breakpoints: (
@@ -25,14 +24,22 @@ $breakpoints: (
 );
 
 // ** _mix-resp-section-padding
-// $tiny-paddings: 50px !default;
-// $xs-paddings: $tiny-paddings !default;
-// $sm-paddings: 80px !default;
-// $md-paddings: $sm-paddings !default;
-// $lg-paddings: 100px !default;
-// $xxl-paddings: $lg-paddings !default;
+// $tiny-paddings: 50px;
+// $xs-paddings: $tiny-paddings;
+// $sm-paddings: 80px;
+// $md-paddings: $sm-paddings;
+// $lg-paddings: 100px;
+// $xxl-paddings: $lg-paddings;
 
 // ** _mix-section-height
-// $default-section-height: 100vh !default;
-// $default-section-min-height: 500px !default;
-// $default-section-max-height: 800px !default;
+// $default-section-height: 100vh;
+// $default-section-min-height: 500px;
+// $default-section-max-height: 800px;
+
+// ** u-container
+// $containerPadding: $grid-base;
+// $max-width-xs: 540px;
+// $max-width-sm: 720px;
+// $max-width-md: 960px;
+// $max-width-lg: 1184px;
+// $max-width-xxl: 1184px;
