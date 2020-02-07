@@ -1,0 +1,10 @@
+//Make box shadow classes
+@mixin make-box-shadow {
+  @each $name, $shadow in $shadows {
+    .u-box-#{$name} {
+      @include add-box-shadow($shadow);
+    }
+  }
+}
+
+@include make-box-shadow;

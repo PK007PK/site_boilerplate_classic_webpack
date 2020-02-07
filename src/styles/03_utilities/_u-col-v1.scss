@@ -1,0 +1,155 @@
+/* Usage: 
+
+u-col, 
+u-col--33, u-col--67, u-col--5 ... u-col--95
+u-col--xs-33, ... u-col--lg-67,
+u-col--md-85
+
+*/
+
+/**** Overwrite default properties and custom stylling ****/
+$column-padding: $tiles-margin / 2;
+
+/**** Default properties ****/
+$column-padding: $grid-base !default;
+
+%column-paddings {
+  padding-left: $column-padding;
+  padding-right: $column-padding;
+}
+
+@mixin create_col_classes {
+  .u-col {
+    padding-left: $column-padding;
+    padding-right: $column-padding;
+    width: 100%;
+    position: relative;
+
+    &--33 {
+      padding-left: $column-padding;
+      padding-right: $column-padding;
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      position: relative;
+    }
+
+    &--xs-33 {
+      @include respond-above(xs) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        position: relative;
+      }
+    }
+
+    &--sm-33 {
+      @include respond-above(sm) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        position: relative;
+      }
+    }
+
+    &--md-33 {
+      @include respond-above(md) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        position: relative;
+      }
+    }
+
+    &--lg-33 {
+      @include respond-above(lg) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        position: relative;
+      }
+    }
+    //-----------------
+
+    &--67 {
+      padding-left: $column-padding;
+      padding-right: $column-padding;
+      flex: 0 0 66.6667%;
+      max-width: 66.6667%;
+      position: relative;
+    }
+
+    &--xs-67 {
+      @include respond-above(xs) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+        position: relative;
+      }
+    }
+
+    &--sm-67 {
+      @include respond-above(sm) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+        position: relative;
+      }
+    }
+
+    &--md-67 {
+      @include respond-above(md) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+        position: relative;
+      }
+    }
+
+    &--lg-67 {
+      @include respond-above(lg) {
+        padding-left: $column-padding;
+        padding-right: $column-padding;
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+        position: relative;
+      }
+    }
+  }
+
+  $value: 5;
+
+  @for $i from 1 through 19 {
+    $percvalue: $value * 1%;
+
+    .u-col--#{$value} {
+      padding-left: $column-padding;
+      padding-right: $column-padding;
+      flex: 0 0 #{$percvalue};
+      max-width: #{$percvalue};
+      position: relative;
+    }
+
+    @each $key, $val in $breakpoints {
+      .u-col--#{$key}-#{$value} {
+        @include respond-above($key) {
+          padding-left: $column-padding;
+          padding-right: $column-padding;
+          flex: 0 0 #{$percvalue};
+          max-width: #{$percvalue};
+          position: relative;
+        }
+      }
+    }
+
+    $value: $value + 5;
+  }
+}
+
+@include create_col_classes;

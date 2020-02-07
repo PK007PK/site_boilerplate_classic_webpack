@@ -1,0 +1,13 @@
+.u-row {
+  /**** Overwrite default variables and custom projekt stylling ****/
+  $column-padding: $tiles-margin / 2;
+
+  /**** Default properties ****/
+  $row-negative-margin: $grid-base !default;
+
+  /**** Core component ****/
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$row-negative-margin;
+  margin-right: -$row-negative-margin;
+}

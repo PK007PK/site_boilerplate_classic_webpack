@@ -1,0 +1,16 @@
+.u-shadow-hover-click-effect {
+  /**** Overwrite default variables and custom projekt stylling ****/
+  /**** Default properties ****/
+
+  /**** Core component ****/
+  @include add-box-shadow();
+  @include add-text-shadow();
+  @extend %transition;
+  &:hover {
+    @include add-box-shadow($shadow-4);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

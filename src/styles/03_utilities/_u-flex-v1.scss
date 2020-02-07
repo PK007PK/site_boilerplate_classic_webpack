@@ -1,0 +1,63 @@
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//  .u-flex // .u-flex--(xs sm md lg)-up // .u-flex--(xs sm md lg)-down
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include create-resp-class('u-flex', 'display', 'flex');
+@include create-resp-class('u-flex-col', 'flex-direction', 'column');
+@include create-resp-class('u-flex-row', 'flex-direction', 'row');
+@include create-resp-class('u-flex-wrap', 'flex-wrap', 'wrap');
+@include create-resp-class('u-flex-no-wrap', 'flex-wrap', 'nowrap');
+
+// * Align
+
+@include create-resp-class('u-flex-y-start', 'align-items', 'flex-start');
+@include create-resp-class('u-flex-y-end', 'align-items', 'flex-end');
+@include create-resp-class('u-flex-y-center', 'align-items', 'center');
+
+// * Justify
+
+@include create-resp-class('u-flex-x-start', 'align-items', 'flex-start');
+@include create-resp-class('u-flex-x-end', 'align-items', 'flex-end');
+@include create-resp-class('u-flex-x-center', 'justify-content', 'center');
+@include create-resp-class(
+  'u-flex-x-between',
+  'justify-content',
+  'space-between'
+);
+@include create-resp-class(
+  'u-flex-x-around',
+  'justify-content',
+  'space-around'
+);
+
+// Multiple property
+
+@mixin create-flex-center {
+  .u-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @each $key, $val in $breakpoints {
+    .u-flex-center--#{$key}-up {
+      @include respond-above($key) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  @each $key, $val in $breakpoints {
+    .u-flex-center--#{$key}-down {
+      @include respond-below($key) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include create-flex-center;

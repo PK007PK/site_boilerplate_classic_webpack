@@ -1,0 +1,26 @@
+/**** Overwrite default properties and custom stylling ****/
+
+/**** Default properties ****/
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:link {
+  }
+
+  &:visited {
+    // outline: none !important;
+  }
+
+  &:hover {
+  }
+
+  &:active {
+    // outline: none !important;
+  }
+
+  &:focus {
+    outline: 1px solid black !important;
+  }
+}

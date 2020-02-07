@@ -1,0 +1,23 @@
+// @mixin create-flex-col {
+//   .u-flex-col {
+//     flex-direction: column;
+//   }
+
+//   @each $key in $breakpoints {
+//     .u-flex-col--#{$key}-up {
+//       @include respond-above($key) {
+//         flex-direction: column;
+//       }
+//     }
+//   }
+
+//   @each $key in $breakpoints {
+//     .u-flex-col--#{$key}-down {
+//       @include respond-below($key) {
+//         flex-direction: column;
+//       }
+//     }
+//   }
+// }
+
+// @include create-flex-col;

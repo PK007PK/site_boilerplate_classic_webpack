@@ -1,0 +1,21 @@
+@mixin create-resp-class($name, $propperty, $value) {
+  .#{$name} {
+    #{$propperty}: #{$value};
+  }
+
+  @each $key, $val in $breakpoints {
+    .#{$name}--#{$key}-up {
+      @include respond-above($key) {
+        #{$propperty}: #{$value};
+      }
+    }
+  }
+
+  @each $key, $val in $breakpoints {
+    .#{$name}--#{$key}-down {
+      @include respond-below($key) {
+        #{$propperty}: #{$value};
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/**** Overwrite default variables and custom projekt stylling ****/
+/**** Default properties ****/
+
+/**** Core component ****/
+
+@mixin makeBgColors {
+  @each $name, $color in $colors {
+    .u-bg-#{$name} {
+      background-color: $color !important;
+    }
+  }
+}
+
+@include makeBgColors;

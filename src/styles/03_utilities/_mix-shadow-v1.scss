@@ -1,0 +1,13 @@
+// Dodać opisy, bo już sam nie rozumiem co to miało robić, przemyśleć
+
+@mixin add-box-shadow($shadow: $default-shadow) {
+  box-shadow: $shadow;
+}
+
+@mixin add-text-shadow($shadow: $default-shadow) {
+  text-shadow: $shadow;
+}
+
+%add-text-shadow {
+  @include add-text-shadow();
+}

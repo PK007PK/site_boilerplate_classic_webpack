@@ -1,0 +1,11 @@
+// Prepare clases with font weights
+
+@mixin makeFontWeights {
+  @each $name, $weight in $font-weights {
+    .u-#{$name} {
+      font-weight: $weight !important;
+    }
+  }
+}
+
+@include makeFontWeights;

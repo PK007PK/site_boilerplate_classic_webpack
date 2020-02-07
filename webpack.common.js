@@ -25,7 +25,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 2000,
+              limit: 4000,
               esModule: false,
               name: '[name].[hash].[ext]',
               outputPath: 'images/',
@@ -43,18 +43,19 @@ module.exports = {
               name: '[name].[ext]',
               outputPath: 'fonts/',
               publicPath: 'fonts/',
-
-              test: /\.js$/,
-              exclude: /(node_modules)/,
-              use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/preset-env'],
-                },
-              },
             },
           },
         ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },

@@ -23,7 +23,9 @@ module.exports = merge(common, {
             loader: 'html-loader-srcset',
             options: {
               minimize: true,
+              attrs: [':data-srcset', ':data-src', ':srcset', ':src'],
               ignoreCustomFragments: [/(?:^|\W)img(?:$|\W)/],
+
               // ignoring because of parse error during build. problem with minify, html-loader-srcset, url-loader.
             },
           },

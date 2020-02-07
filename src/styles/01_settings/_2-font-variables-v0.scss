@@ -1,0 +1,52 @@
+/**** Specific project values ****/
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500&display=swap');
+
+//Body font
+$main-font: ('Roboto', sans-serif);
+
+//Font sizes
+$font-size-small: 1.4rem;
+$font-size-16: 1.6rem;
+$font-size-24: 2.4rem;
+$font-size-36: 3.6rem;
+$font-size-46: 4.6rem;
+
+// Body font size
+$font-size-base: $font-size-16;
+
+// Create font-size classes
+$font-sizes: (
+  'font-size-small': $font-size-small,
+  'font-size-16': $font-size-16,
+  'font-size-24': $font-size-24,
+  'font-size-36': $font-size-36,
+  'font-size-46': $font-size-46,
+);
+
+//Font weights
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+
+// Body font weight
+$font-weight-base: $font-weight-400;
+
+// Create font-weight classes
+$font-weights: (
+  'font-weight-200': $font-weight-200,
+  'font-weight-300': $font-weight-300,
+  'font-weight-400': $font-weight-400,
+  'font-weight-500': $font-weight-500,
+);
+
+//Headings
+// $h1-font-size:
+// $h2-font-size:
+// $h3-font-size:
+// $h4-font-size:
+
+// $h1-font-weight:
+// $h2-font-weight:
+// $h3-font-weight:
+// $h4-font-weight:

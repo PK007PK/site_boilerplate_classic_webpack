@@ -1,8 +1,15 @@
 // Normalize
 @import '~normalize.css/normalize.css';
 
-//Fontello
-@import 'styles/fontello/css/fontello.css';
+//Glide.js
+// Required Core Stylesheet
+// @import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+
+// Optional Theme Stylesheet
+// @import 'node_modules/@glidejs/glide/src/assets/sass/glide.theme';
+
+//AOS
+// @import '../node_modules/aos/dist/aos.css';
 
 // SASS files
 @import 'styles/01_settings/_01_settings.scss';

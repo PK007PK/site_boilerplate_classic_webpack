@@ -1,0 +1,13 @@
+.u-text-hover {
+  /**** Overwrite default variables and custom projekt stylling ****/
+
+  /**** Default properties ****/
+  $default-text-hover-color: green !default;
+
+  /**** Core component ****/
+  @extend %transition;
+
+  &:hover {
+    color: $default-text-hover-color;
+  }
+}

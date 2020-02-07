@@ -1,0 +1,35 @@
+/**** Specific project values: ****/
+
+//Colors
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(254, 254, 254);
+$color-lightGreen: #56ccc8;
+$color-blue: #4d6baa;
+$color-darkBlue: #152840;
+$color-lightBlue: #4fc6f8;
+$color-red: #ea6060;
+$color-gray: #b2b9bd;
+$color-darkGray: #787878;
+$color-lightGray: #dde2e4;
+$color-stellBlue: #506782;
+$color-grayBlack: #475055;
+$color-gplus: #ea6060;
+
+$colors: (
+  'color-black': $color-black,
+  'color-white': $color-white,
+  'color-lightGreen': $color-lightGreen,
+  'color-blue': $color-blue,
+  'color-darkBlue': $color-darkBlue,
+  'color-lightBlue': $color-lightBlue,
+  'color-red': $color-red,
+  'color-gray': $color-gray,
+  'color-darkGray': $color-darkGray,
+  'color-lightGray': $color-lightGray,
+  'color-stellBlue': $color-stellBlue,
+  'color-grayBlack': $color-grayBlack,
+  'color-gplus': $color-gplus,
+);
+
+/**** Overwrite default variables: ****/
+/**** Default system variables: ****/

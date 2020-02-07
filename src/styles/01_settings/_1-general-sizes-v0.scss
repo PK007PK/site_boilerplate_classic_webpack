@@ -1,0 +1,25 @@
+/**** Specific project values ****/
+
+/**** Overwrite default variables ****/
+
+/**** Default system variables ****/
+
+// Grid
+$grid-base: 1rem !default;
+$tiles-margin: $grid-base * 1.5 !default;
+
+// Breakpoints
+$xs-break: 576px !default;
+$sm-break: 768px !default;
+$md-break: 992px !default;
+$lg-break: 1200px !default;
+$xxl-break: 2000px !default;
+
+// Map of breakpoints.
+$breakpoints: (
+  xs: $xs-break,
+  sm: $sm-break,
+  md: $md-break,
+  lg: $lg-break,
+  xxl: $xxl-break,
+);

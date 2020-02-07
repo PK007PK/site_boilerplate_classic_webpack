@@ -1,0 +1,10 @@
+//Make text shadow classes
+@mixin make-text-shadow {
+  @each $name, $shadow in $shadows {
+    .u-text-#{$name} {
+      @include add-text-shadow($shadow);
+    }
+  }
+}
+
+@include make-text-shadow;
