@@ -11,7 +11,6 @@ $shadow-2: 0px 2px 4px $shadow-color-1, 0px 4px 8px $shadow-color-2;
 $shadow-3: 0px 4px 8px $shadow-color-1, 0px 8px 16px $shadow-color-2;
 $shadow-4: 0px 6px 12px $shadow-color-1, 0px 16px 24px $shadow-color-2;
 $shadow-5: 0px 1px 2px $shadow-color-3, 0px 2px 6px $shadow-color-1;
-$default-shadow: $shadow-1;
 
 $shadows: (
   'shadow1': $shadow-1,
@@ -23,3 +22,6 @@ $shadows: (
 
 /**** Overwrite default variables: ****/
 /**** Default system variables: ****/
+
+// ** _mix-shadow
+// $default-shadow: $shadow-1;

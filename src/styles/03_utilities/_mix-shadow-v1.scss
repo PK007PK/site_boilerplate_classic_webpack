@@ -1,13 +1,17 @@
 // Dodać opisy, bo już sam nie rozumiem co to miało robić, przemyśleć
 
+/**** Overwrite default variables and custom projekt stylling ****/
+/**** Default properties ****/
+$shadow-color-1: rgba(8, 35, 48, 0.14) !default;
+$shadow-color-2: rgba(8, 35, 48, 0.08) !default;
+$shadow-1: 0px 1px 2px $shadow-color-1, 0px 2px 6px $shadow-color-2 !default;
+$default-shadow: $shadow-1 !default;
+
+/**** Core component ****/
 @mixin add-box-shadow($shadow: $default-shadow) {
   box-shadow: $shadow;
 }
 
 @mixin add-text-shadow($shadow: $default-shadow) {
   text-shadow: $shadow;
-}
-
-%add-text-shadow {
-  @include add-text-shadow();
 }
