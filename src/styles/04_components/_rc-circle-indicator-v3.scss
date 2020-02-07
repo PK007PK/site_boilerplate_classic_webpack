@@ -1,0 +1,40 @@
+.c-circle-indicator {
+  // https://k9yri.csb.app/
+  // https://www.figma.com/file/mnTZ5mBrEs1Ys3YDDi3rro/PK-SCSS?node-id=0%3A1
+
+  //Overwrite variables:
+
+  //Default main variables:
+  $grid-base: 10px !default;
+
+  $circle-indicator--triger--color: 'inherit' !default;
+  $circle-indicator--triger--border-color: $color-gray;
+
+  $circle-indicator--triger--active-color: $color-gray;
+  $circle-indicator--triger--active-border-color: $color-gray;
+
+  //Default local variables:
+  $circle-indicator--body--width: 70px !important;
+  $circle-indicator--triger--size: 15px !default;
+
+  //Component body:
+  display: flex;
+  justify-content: space-between;
+  width: $circle-indicator--body--width;
+
+  &__trigger {
+    @extend .u-shadow-hover-click-effect;
+    display: block;
+    width: $circle-indicator--triger--size;
+    height: $circle-indicator--triger--size;
+    background-color: $circle-indicator--triger--color;
+
+    border-radius: 100px;
+    border: 1px solid $circle-indicator--triger--border-color;
+
+    &--active {
+      background-color: $circle-indicator--triger--active-color;
+      border: 1px solid $circle-indicator--triger--active-border-color;
+    }
+  }
+}
