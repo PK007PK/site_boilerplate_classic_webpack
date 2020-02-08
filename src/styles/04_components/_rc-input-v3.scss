@@ -1,0 +1,33 @@
+.c-input {
+  //Overwrite variables:
+
+  //Default main variables:
+  $input--placeholder--color: white !default;
+  $input--background--color: black !default;
+  $input--border--color: black !default;
+
+  //Default local variables:
+
+  //Component body:
+  background-color: $input--background--color;
+  border: 1px solid $input--border--color;
+
+  width: 100%;
+  max-width: 400px;
+  margin: 0;
+  display: block;
+  padding: 5px 10px;
+  line-height: 1.5;
+
+  &::placeholder {
+    color: $input--placeholder--color;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  @include respond-below(md) {
+    text-align: center;
+  }
+}
