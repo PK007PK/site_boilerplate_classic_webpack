@@ -1,3 +1,18 @@
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.lazy-background {
+  background-image: none !important;
+  background-color: gray;
+}
+
 // .lazyload {
 //   opacity: 0;
 // }
@@ -7,12 +22,3 @@
 //   transition: opacity 11300ms;
 //   background: red url(images/images/loader.gif) no-repeat center;
 // }
-
-.lazyload,
-.lazyloading {
-  opacity: 0;
-}
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 300ms;
-}

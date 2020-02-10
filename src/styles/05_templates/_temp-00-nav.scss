@@ -1,46 +1,59 @@
-.temp-00-nav {
-  display: flex;
-  flex-direction: column;
-  height: 10vh;
-  max-height: 190px;
-  justify-content: center;
+.a1 {
+  background-image: url('https://ik.imagekit.io/demo/img/image10.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-  @include respond-above(md) {
-    height: 15vh;
-  }
+.a2 {
+  background-image: url('https://ik.imagekit.io/demo/img/image2.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-  @include respond-above(lg) {
-    height: 20vh;
-  }
+.a3 {
+  background-image: url('https://ik.imagekit.io/demo/img/image1.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-  &__cont1,
-  &__cont2 {
-    display: flex;
-    justify-content: space-between;
-    margin-top: $grid-base;
-  }
+.a4 {
+  background-image: url('https://ik.imagekit.io/demo/img/image4.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-  .c-info {
-    display: none;
+.a5 {
+  background-image: url('https://ik.imagekit.io/demo/img/image5.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-    @include respond-above(md) {
-      display: flex;
-    }
-  }
+.a6 {
+  background-image: url('https://ik.imagekit.io/demo/img/image6.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-  .c-menu {
-    display: none;
+.a7 {
+  background-image: url('https://ik.imagekit.io/demo/img/image7.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-    @include respond-above(sm) {
-      display: flex;
-    }
-  }
+.a8 {
+  background-image: url('https://ik.imagekit.io/demo/img/image8.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-  .c-socials {
-    display: none;
+.a9 {
+  background-image: url('https://ik.imagekit.io/demo/img/image9.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
+}
 
-    @include respond-above(sm) {
-      display: flex;
-    }
-  }
+.a10 {
+  background-image: url('https://ik.imagekit.io/demo/img/image2.jpeg?tr=w-600,h-400');
+  max-width: 600px;
+  height: 400px;
 }

@@ -1,0 +1,54 @@
+// + lazyload
+
+@mixin resp-background(
+  $sm-down-pict,
+  $sm-down-pict-hi,
+  $sm-md-pict,
+  $sm-md-pict-hi,
+  $md-xxl-pict,
+  $md-xxl-pict-hi
+) {
+  @include respond-below(sm) {
+    background-image: url($sm-down-pict);
+
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background-image: url($sm-down-pict-hi);
+    }
+
+    // background-image: image-set($sm-down-pict 1x, $sm-down-pict-hi 2x);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include respond-between(sm, md) {
+    @media (-webkit-max-device-pixel-ratio: 1.999) {
+      background: url($sm-md-pict);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background: url($sm-md-pict-hi);
+    }
+
+    // background-image: image-set($sm-md-pict 1x, $sm-down-pict-hi 2x);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include respond-between(md, xxl) {
+    @media (-webkit-max-device-pixel-ratio: 1.999) {
+      background: url($md-xxl-pict);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background: url($md-xxl-pict-hi);
+    }
+
+    // background-image: image-set($md-xxl-pict 1x, $md-xxl-pict-hi 2x);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @include respond-above(xxl) {
+    background: none;
+  }
+}
