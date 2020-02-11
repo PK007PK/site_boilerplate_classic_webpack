@@ -1,0 +1,23 @@
+.temp-00-standarized-section-container {
+  @include resp-background(
+    'images/images/sec-01-back-sm.jpg',
+    'images/images/sec-01-back-sm-hi.jpg',
+    'images/images/sec-01-back-md.jpg',
+    'images/images/sec-01-back-md-hi.jpg',
+    'images/images/sec-01-back-lg.jpg',
+    'images/images/sec-01-back-lg-hi.jpg'
+  );
+
+  @include section-100vh-height();
+
+  &__inner {
+    @include resp-section-padding();
+
+    @include respond-above(xxl) {
+      height: 100%;
+      background-image: url('images/images/sec-01-back-lg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

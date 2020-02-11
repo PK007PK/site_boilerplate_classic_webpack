@@ -8,10 +8,10 @@ $inside-y-margins: 0.8rem !default;
 $inside-x-margins: 1rem !default;
 
 .c-card {
-  @include resp-y-padding($sm: 20px, $md: 20px);
+  @include resp-section-padding($sm: 20px, $md: 20px);
 
   &--bigpadding {
-    @include resp-y-padding();
+    @include resp-section-padding();
   }
 
   display: flex;

@@ -15,7 +15,7 @@ $lg-paddings: 100px !default;
 $xxl-paddings: $lg-paddings !default;
 
 /**** Core component ****/
-@mixin resp-y-padding(
+@mixin resp-section-padding(
   $tiny: $tiny-paddings,
   $xs: $xs-paddings,
   $sm: $sm-paddings,
@@ -51,3 +51,5 @@ $xxl-paddings: $lg-paddings !default;
     padding-bottom: $xxl;
   }
 }
+
+//@include resp-section-padding($sm: 20px, $md: 20px);

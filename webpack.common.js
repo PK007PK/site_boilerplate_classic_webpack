@@ -79,7 +79,7 @@ module.exports = {
       },
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'async',
+      defaultAttribute: 'defer',
     }),
   ],
   // externals: {

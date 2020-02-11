@@ -1,5 +1,3 @@
-// + lazyload
-
 @mixin resp-background(
   $sm-down-pict,
   $sm-down-pict-hi,
@@ -8,16 +6,15 @@
   $md-xxl-pict,
   $md-xxl-pict-hi
 ) {
+  background-repeat: no-repeat;
+  background-size: cover;
+
   @include respond-below(sm) {
     background-image: url($sm-down-pict);
 
     @media (-webkit-min-device-pixel-ratio: 2) {
       background-image: url($sm-down-pict-hi);
     }
-
-    // background-image: image-set($sm-down-pict 1x, $sm-down-pict-hi 2x);
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @include respond-between(sm, md) {
@@ -28,10 +25,6 @@
     @media (-webkit-min-device-pixel-ratio: 2) {
       background: url($sm-md-pict-hi);
     }
-
-    // background-image: image-set($sm-md-pict 1x, $sm-down-pict-hi 2x);
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @include respond-between(md, xxl) {
@@ -42,10 +35,6 @@
     @media (-webkit-min-device-pixel-ratio: 2) {
       background: url($md-xxl-pict-hi);
     }
-
-    // background-image: image-set($md-xxl-pict 1x, $md-xxl-pict-hi 2x);
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   @include respond-above(xxl) {
