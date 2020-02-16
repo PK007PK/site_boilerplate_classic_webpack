@@ -1,0 +1,80 @@
+.c-side-contact {
+  //Overwrite variables
+
+  //Default variables
+  $light-color: #eceff1;
+  $medium-color: #78909c;
+  $dark-color: #263238;
+
+  //Default main variables:
+  $grid-base: 10px !default;
+
+  $side-contact--font-size: 14px !default;
+  $side-contact--font-weight: normal !default;
+  $side-contact--icon-size: $grid-base * 2 !default;
+
+  $side-contact--text-color: $dark-color !default;
+  $side-contact--icon-color: $side-contact--text-color !default;
+  $side-contact--component-color: $light-color !default;
+
+  //Default local variables:
+  $side-contact--item-padding: 15px 0 15px 25px !default;
+  $side-contact--icon-text-space: 15px !default;
+
+  //Component body
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $side-contact--component-color;
+  color: $side-contact--text-color;
+
+  font-size: $side-contact--font-size;
+  font-weight: $side-contact--font-weight;
+
+  &__item {
+    padding: $side-contact--item-padding;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    height: 100%;
+    width: 100%;
+  }
+
+  //Icon styling
+  i {
+    color: $side-contact--icon-color;
+    font-size: $side-contact--icon-size;
+    background-color: $side-contact--component-color;
+
+    &::before {
+      margin: 0;
+      margin-right: $side-contact--icon-text-space;
+    }
+  }
+}
+
+/*
+
+<ul class="c-side-contact">
+  <li class="c-side-contact__item">
+    <i class="c-icon icon-phone"></i>
+    <span>(912) 555-1234<br/>(912) 555-1234</span>
+  </li>
+  <li class="c-side-contact__item">
+    <i class="c-icon icon-location"></i>
+    <span>
+      1600 Pennsylvania<br />
+      Ave NW, Washington<br />
+      DC 20500, USA
+    </span>
+  </li>
+  <li class="c-side-contact__item u-border-none">
+    <i class="c-icon icon-mail"></i>
+    <span>
+      hello@website.com,<br/>
+      office@website.com
+    </span>
+  </li>
+</ul>
+
+*/

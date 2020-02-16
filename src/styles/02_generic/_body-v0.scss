@@ -8,10 +8,11 @@ $font-size-base: 1.6rem !default;
 $font-weight-base: 400 !default;
 
 body {
-  font-family: $main-font;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  background-color: $color-stellBlue;
+  font-family: $main-body-font;
+  font-size: $main-body-font-size;
+  font-weight: $main-body-font-weight;
+  color: $main-body-color;
+  background-color: $main-body-background-color;
   margin: 0 auto;
   padding: 0;
   overflow-x: hidden;

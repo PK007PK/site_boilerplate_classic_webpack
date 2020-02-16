@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500&display=swap');
 
 //Body font
-$main-font: ('Roboto', sans-serif);
+$primary-font: ('Raleway', sans-serif);
+// $secondary-font: ('Playfair Display', serif);
 
 //Font sizes
 $font-size-small: 1.4rem;
@@ -10,9 +11,6 @@ $font-size-16: 1.6rem;
 $font-size-24: 2.4rem;
 $font-size-36: 3.6rem;
 $font-size-46: 4.6rem;
-
-// Body font size
-$font-size-base: $font-size-16;
 
 // Create font-size classes
 $font-sizes: (
@@ -29,9 +27,6 @@ $font-weight-300: 300;
 $font-weight-400: 400;
 $font-weight-500: 500;
 
-// Body font weight
-$font-weight-base: $font-weight-400;
-
 // Create font-weight classes
 $font-weights: (
   'font-weight-200': $font-weight-200,
@@ -39,6 +34,11 @@ $font-weights: (
   'font-weight-400': $font-weight-400,
   'font-weight-500': $font-weight-500,
 );
+
+// Main body styling
+$main-body-font: $primary-font;
+$main-body-font-size: $font-size-16;
+$main-body-font-weight: $font-weight-400;
 
 // ** Headings
 // $h1-font-size:
@@ -64,3 +64,12 @@ $font-weights: (
 
 // ** c-icon
 // $icon--image--font-size: 2.5rem !default;
+
+// ** c-side-contact
+// $side-contact--font-size: 14px !default;
+// $side-contact--font-weight: normal !default;
+// $side-contact--icon-size: $grid-base * 2 !default;
+
+// ** c-side-menu
+// $side-menu--text--font-weight: normal !default;
+// $side-menu--icon--size: $grid-base * 2 !default;

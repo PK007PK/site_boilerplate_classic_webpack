@@ -1,65 +1,75 @@
 .c-side-menu {
   //Overwrite variables
-  $component-color: white;
-  $component-text-color: $color-grayBlack;
-  $component-active-text-color: white;
-  $component-active-color: $color-lightGreen;
-  $icon-color: $color-darkGray;
 
   //Default variables
+  $light-color: #eceff1;
+  $medium-color: #78909c;
+  $dark-color: #263238;
+  $active-light-color: #c8e6c9;
+  $active-dark-color: #2e7d32;
+
+  //Default main variables
   $grid-base: 10px !default;
-  $item-height: 62px !default;
 
-  $icon-size: $grid-base * 2 !default;
-  $icon-distance-from-left: $grid-base * 2 !default;
-  $icon-color: yellow !default;
-  $icon-text-distance: $grid-base !important;
+  $side-menu--item--color-background: $light-color !default;
+  $side-menu--item--color-background-active: $active-light-color !default;
+  $side-menu--item--color-background-hover: $side-menu--item--color-background-active !default;
 
-  $component-color: black !default;
-  $component-text-color: white !default;
-  $component-text-weight: normal !default;
-  $component-active-color: red !default;
-  $component-active-text-color: blue !default;
+  $side-menu--text--color: $dark-color !default;
+  $side-menu--text--color-hover: $active-dark-color !default;
+  $side-menu--text--color-active: $side-menu--text--color-hover !default;
+  $side-menu--text--font-weight: normal !default;
+
+  $side-menu--icon--size: $grid-base * 2 !default;
+  $side-menu--icon--color: $dark-color !default;
+  $side-menu--icon--color-active: $active-dark-color !default;
+  $side-menu--icon--color-hover: $active-dark-color !default;
+
+  //Default local variables
+  $side-menu--icon--text-space: 15px !default;
+  $side-menu--item--padding: 15px !default;
 
   //Component body
-  color: $component-text-color;
-  background-color: $component-color;
-  font-weight: $component-text-weight;
+  color: $side-menu--text--color;
+  background-color: $side-menu--item--color-background;
+  font-weight: $side-menu--text--font-weight;
   display: flex;
   flex-direction: column;
 
   &__item {
     transition: background-color 0.2s ease;
-    border-bottom: 1px solid gray;
-    padding: 0 $icon-distance-from-left;
-    height: $item-height;
+    border-bottom: 1px solid $dark-color;
+    padding: $side-menu--item--padding;
     display: flex;
     align-items: center;
 
     &:hover {
-      color: $component-active-text-color;
-      background-color: $component-active-color;
-
+      color: $side-menu--text--color-hover;
+      background-color: $side-menu--item--color-background-hover;
       i {
         transition: all 0.4s;
-        color: $component-active-text-color;
-        background-color: $component-active-color;
+        color: $side-menu--icon--color-hover;
       }
     }
 
     i {
-      color: $icon-color;
-      font-size: $icon-size;
-      margin-right: $icon-text-distance;
+      color: $side-menu--icon--color;
+      font-size: $side-menu--icon--size;
+      margin: 0;
+      margin-right: $side-menu--icon--text-space;
+
+      &::before {
+        margin: 0;
+        padding: 0 !important;
+      }
     }
 
     &--active {
-      color: $component-active-text-color;
-      background-color: $component-active-color;
+      color: $side-menu--text--color-active;
+      background-color: $side-menu--item--color-background-active; ///
 
       i {
-        color: $component-active-text-color;
-        background-color: $component-active-color;
+        color: $side-menu--icon--color-active; ///
       }
     }
 
@@ -73,3 +83,28 @@
     }
   }
 }
+
+/*
+
+<ul class="c-side-menu">
+  <li class="c-side-menu__item c-side-menu__item--active">
+    <a href="#">
+      <i class="c-icon icon-home"></i>
+      <span>Home</span>
+    </a>
+  </li>
+  <li class="c-side-menu__item">
+    <a href="#">
+      <i class="c-icon icon-basket"></i>
+      <span>Store</span>
+    </a>
+  </li>
+  <li class="c-side-menu__item">
+    <a href="#">
+      <i class="c-icon icon-edit"></i>
+      <span>Blog</span>
+    </a>
+  </li>
+</ul>
+
+*/

@@ -6,6 +6,9 @@
   $component-padding: $grid-base * 3 !default;
   $item-margin: $grid-base $grid-base * 3 !default;
 
+  $item-hover-color: black !default;
+  $item-active-hover-color: black !default;
+
   //Component body
   display: flex;
   flex-direction: column;
@@ -20,11 +23,11 @@
     margin: $item-margin;
 
     &:hover {
-      color: $color-lightGreen;
+      color: $item-hover-color;
     }
 
     &--active {
-      color: $color-lightGreen;
+      color: $item-active-hover-color;
     }
 
     a {

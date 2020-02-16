@@ -15,6 +15,10 @@ $color-stellBlue: #506782;
 $color-grayBlack: #475055;
 $color-gplus: #ea6060;
 
+//Main body color:
+$main-body-color: $color-black;
+$main-body-background-color: $color-white;
+
 $colors: (
   'color-black': $color-black,
   'color-white': $color-white,
@@ -56,3 +60,21 @@ $colors: (
 // $input--placeholder--color: white !default;
 // $input--background--color: black !default;
 // $input--border--color: black !default;
+
+// ** c-side-contact
+// $side-contact--text-color: $dark-color !default;
+// $side-contact--icon-color: $side-contact--text-color !default;
+// $side-contact--component-color: $light-color !default;
+
+// ** c-side-menu
+// $side-menu--item--color-background: $light-color !default;
+// $side-menu--item--color-background-active: $active-light-color !default;
+// $side-menu--item--color-background-hover: $side-menu--item--color-background-active !default;
+//
+// $side-menu--text--color: $dark-color !default;
+// $side-menu--text--color-hover: $active-dark-color !default;
+// $side-menu--text--color-active: $side-menu--text--color-hover !default;
+//
+// $side-menu--icon--color: $dark-color !default;
+// $side-menu--icon--color-active: $active-dark-color !default;
+// $side-menu--icon--color-hover: $active-dark-color !default;
