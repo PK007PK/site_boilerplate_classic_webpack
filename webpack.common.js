@@ -69,9 +69,59 @@ module.exports = {
       },
     ]),
     new HtmlWebpackPlugin({
-      title: 'P01Classic',
+      title: 'Site boilerplate: home',
       filename: 'index.html',
       template: './src/index.html',
+      inject: 'head',
+      favicon: './src/images/favicon.ico',
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Site boilerplate: components',
+      filename: 'components.html',
+      template: './src/components.html',
+      inject: 'head',
+      favicon: './src/images/favicon.ico',
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Site boilerplate: images',
+      filename: 'images.html',
+      template: './src/images.html',
+      inject: 'head',
+      favicon: './src/images/favicon.ico',
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Site boilerplate: section templates',
+      filename: 'sectiontemplates.html',
+      template: './src/sectiontemplates.html',
+      inject: 'head',
+      favicon: './src/images/favicon.ico',
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Site boilerplate: lazy background',
+      filename: 'lazybackground.html',
+      template: './src/lazybackground.html',
+      inject: 'head',
+      favicon: './src/images/favicon.ico',
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Site boilerplate: screens',
+      filename: 'screens.html',
+      template: './src/screens.html',
       inject: 'head',
       favicon: './src/images/favicon.ico',
       minify: {

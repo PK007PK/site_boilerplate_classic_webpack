@@ -1,43 +1,59 @@
 @mixin resp-background(
-  $sm-down-pict,
-  $sm-down-pict-hi,
-  $sm-md-pict,
-  $sm-md-pict-hi,
-  $md-xxl-pict,
-  $md-xxl-pict-hi
+  $phone-9x16,
+  $phone-9x16-hi,
+  $phone-9x21,
+  $phone-9x21-hi,
+  $tablet-3x4,
+  $tablet-3x4-hi,
+  $tablet-2x3,
+  $tablet-2x3-hi,
+  $desktop16x9,
+  $desktop16x9-hi
 ) {
   background-repeat: no-repeat;
   background-size: cover;
-
-  @include respond-below(sm) {
-    background-image: url($sm-down-pict);
-
-    @media (-webkit-min-device-pixel-ratio: 2) {
-      background-image: url($sm-down-pict-hi);
+  background-position: center;
+  @include respond-below(xs) {
+    $condition1: '(min-aspect-ratio: 11/20)';
+    $condition2: '(max-aspect-ratio: 11/20)';
+    @media #{$condition2} and (max-resolution: 2.99dppx) {
+      background-image: url($phone-9x21);
+    }
+    @media #{$condition2} and (min-resolution: 3dppx) {
+      background-image: url($phone-9x21-hi);
+    }
+    @media #{$condition1} and (max-resolution: 2.99dppx) {
+      background-image: url($phone-9x16);
+    }
+    @media #{$condition1} and (min-resolution: 3dppx) {
+      background-image: url($phone-9x16-hi);
     }
   }
 
-  @include respond-between(sm, md) {
-    @media (-webkit-max-device-pixel-ratio: 1.999) {
-      background: url($sm-md-pict);
+  @include respond-between(xs, lg) {
+    $condition3: '(max-aspect-ratio: 7/10)';
+    $condition4: '(min-aspect-ratio: 7/10)';
+    @media #{$condition3} and (max-resolution: 1.99dppx) {
+      background-image: url($tablet-2x3);
     }
-
-    @media (-webkit-min-device-pixel-ratio: 2) {
-      background: url($sm-md-pict-hi);
+    @media #{$condition3} and (min-resolution: 2.0dppx) {
+      background-image: url($tablet-2x3-hi);
     }
-  }
-
-  @include respond-between(md, xxl) {
-    @media (-webkit-max-device-pixel-ratio: 1.999) {
-      background: url($md-xxl-pict);
+    @media #{$condition4} and (max-resolution: 1.99dppx) {
+      background-image: url($tablet-3x4);
     }
-
-    @media (-webkit-min-device-pixel-ratio: 2) {
-      background: url($md-xxl-pict-hi);
+    @media #{$condition4} and (min-resolution: 2.0dppx) {
+      background-image: url($tablet-3x4-hi);
     }
   }
 
-  @include respond-above(xxl) {
-    background: none;
+  @include respond-above(lg) {
+    @media (max-resolution: 1.49dppx) {
+      background-image: url($desktop16x9);
+    }
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url($desktop16x9-hi);
+    }
   }
 }

@@ -1,0 +1,26 @@
+.temp-03-resp-background {
+  @include section-100vh-height();
+  @include resp-background(
+    $phone-9x16: 'images/images/temp-03-back--phone-9x16.jpg',
+    $phone-9x16-hi: 'images/images/temp-03-back--phone-9x16-hi.jpg',
+    $phone-9x21: 'images/images/temp-03-back--phone-9x21.jpg',
+    $phone-9x21-hi: 'images/images/temp-03-back--phone-9x21-hi.jpg',
+    $tablet-3x4: 'images/images/temp-03-back--tablet-3x4.jpg',
+    $tablet-3x4-hi: 'images/images/temp-03-back--tablet-3x4-hi.jpg',
+    $tablet-2x3: 'images/images/temp-03-back--tablet-2x3.jpg',
+    $tablet-2x3-hi: 'images/images/temp-03-back--tablet-2x3-hi.jpg',
+    $desktop16x9: 'images/images/temp-03-back--desktop-16x9.jpg',
+    $desktop16x9-hi: 'images/images/temp-03-back--desktop-16x9-hi.jpg'
+  );
+
+  &__inner {
+    @include resp-section-padding();
+
+    @include respond-above(xxl) {
+      height: 100%;
+      // background-image: url('images/images/sec-01-back-lg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

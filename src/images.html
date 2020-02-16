@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a meta description sample. We can add up to 160 characters."
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="keyword 1, keyword 2, keyword 3" />
+    <!-- <link rel="canonical" href="zxzxzx" /> -->
+    <title>Care Point - Best Doctor</title>
+    <meta http-equiv="Cache-control" content="public" />
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="u-container">
+      <h1>Img, picture</h1>
+      <h2>Img</h2>
+      <p>
+        src jest najbardziej reprezentatywnym obrazkiem dla starych
+        przeglądarek, które nie rozpoznają srcset
+      </p>
+      <p>
+        srcset - służy do zmieniania rozdzielczości. Przeglądarka sama podejmuje
+        decyzję którą rozdzielczość wybrać. Bierze pod uwagę zmienne których my
+        nie znamy: np prędkość transferu, preferencje użytkownika.
+      </p>
+      <p>
+        W srcset "w" mówi przeglądarce jaką szerokość ma dany obraz w pikselach:
+        img src="cat.jpg" alt="cat" srcset="cat-160.jpg 160w, cat-320.jpg 320w,
+        cat-640.jpg 640w, cat-1280.jpg 1280w"
+      </p>
+      <p>
+        Zawsze kiedy korzystamy z srcset wraz z podaniem w musimy podać też
+        sizes. Jeżeli stosujemy srcset z x1, x2 nie ma takiej konieczności.
+      </p>
+      <p>sizes - mówi przeglądarce jaki rozmiar ma mieć dany source</p>
+      <p>
+        sizes="(max-width: 480px) 100vw, (max-width: 900px) 33vw, 256px" (ten
+        ostatni kiedy już nie ma media) . Sizes informuje o tym jak szeroki
+        będzie obrazek na stronie.
+      </p>
+      <p>
+        Przeglądarka porównuje dostępne źródła i info o tym jak szerokie to
+        bedzie. Dodatkowo bierze pod uwagę inne czynniki jak prędkość netu.
+        Następnie podejmuje decyzję co wyświetlić.
+      </p>
+      <p>
+        W ten sposób zaburzamy rozdział na html i css, ale robimy to dlatego aby
+        przeglądarka dostała info o layoucie jeszcze zanim wczyta css, aby mogła
+        wczytać tylko właściwe obrazy.
+      </p>
+      <p>Przykład:</p>
+      <img
+        alt="test"
+        sizes="(max-width: 480px) 50vw, (max-width: 900px) 33vw, 400px"
+        srcset="
+          https://source.unsplash.com/160x160/?nature    160w,
+          https://source.unsplash.com/320x320/?nature    320w,
+          https://source.unsplash.com/640x640/?nature    640w,
+          https://source.unsplash.com/1280x1280/?nature 1280w
+        "
+        src="https://source.unsplash.com/320x320/?nature"
+        class=""
+      />
+      <p>Prykład z lazysizes:</p>
+      <img
+        sizes="(max-width: 480px) 50vw, (max-width: 900px) 33vw, 400px"
+        data-srcset="
+            images/images/test-img-400.jpg 400w,
+            images/images/test-img-800.jpg 800w,
+            images/images/test-img-1200.jpg 1200w,
+            images/images/test-img-1600.jpg 1600w,
+        "
+        src="images/images/test-img-800.jpg 800w"
+        srcset="images/images/placeholder1x1.png"
+        class="lazyload"
+        alt="ABC"
+      />
+      <h2>Picture</h2>
+
+      <picture>
+        <source
+          media="(max-width: 576px)"
+          sizes="(max-width: 360px) 100vw, 90vw"
+          data-srcset="
+            images/images/phone-9x16-360.jpg 360w,
+            images/images/phone-9x16-hi-720.jpg 720w"
+        />
+        <source
+          media="(min-width: 577px) and (max-width: 1200px)"
+          sizes="(max-width: 900px) 100vw, 90vw"
+          data-srcset="
+            images/images/tablet-3x4-768.jpg 768w,
+            images/images/tablet-3x4-1536.jpg 1536w
+          "
+        />
+        <img
+          sizes="(min-width: 1500px) 100vw, 1700px"
+          data-srcset="
+            images/images/desktop-16x9-1366.jpg 1366w,
+            images/images/desktop-16x9-hi-2185.jpg 2185w"
+          src="images/images/desktop-16x9-1366.jpg"
+          srcset="images/images/placeholder1x1.png"
+          class="lazyload"
+          alt="ABC"
+        />
+      </picture>
+    </div>
+  </body>
+</html>

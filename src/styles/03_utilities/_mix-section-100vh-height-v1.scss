@@ -9,16 +9,6 @@ $default-section-min-height: 500px !default;
 $default-section-max-height: 800px !default;
 
 /**** Core component ****/
-// @mixin section-height(
-//   $height: $default-section-height,
-//   $min-height: $default-section-min-height,
-//   $max-height: $default-section-max-height
-// ) {
-//   height: $height;
-//   min-height: $min-height;
-//   max-height: $max-height;
-// }
-
 @mixin section-100vh-height() {
   @include respond-below(sm) {
     min-height: 100vh;
@@ -40,6 +30,6 @@ $default-section-max-height: 800px !default;
 
   @include respond-above(xxl) {
     height: 100vh;
-    max-height: 750px;
+    max-height: 900px;
   }
 }
