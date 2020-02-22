@@ -1,19 +1,54 @@
 .c-accordion {
-  //Overwrite default values:
+  // * Overwrite default values
 
-  //Default main variables:
-  $accordion--body--color: #eeeeee !default;
-  $accordion--body--background-color: #212121 !default;
-  $accordion--body--active-color: black !default;
-  $accordion--body--active-background-color: #eeeeee !default;
+  // * Default variables
+  // ** Pocket color library
+  $light-color: #eceff1 !default;
+  $medium-color: #78909c !default;
+  $dark-color: #263238 !default;
+  $active-light-color: #c8e6c9 !default;
+  $active-dark-color: #2e7d32 !default;
 
-  $accordion--icon--background-color: #b4a6a6 !default;
-  $accordion--icon--active-background-color: #df7878 !default;
+  $components--focus--color: #e65100 !default;
+  $components--heading--color-text: #b2dfdb !default;
+  $components--heading--color-text-active: #f0f4c3 !default;
+  $components--heading--color-text-hover: #b2dfdb !default;
+  $components--heading--color-text-hover-active: #9e9d24 !default;
+  $components--heading--color-background:  !default;
+  $components--heading--color-background-active:  !default;
+  $components--heading--color-background-hover:  !default;
+  $components--heading--color-background-hover-active:  !default;
+  $components--body--color-text:  !default;
+  $components--body--color-text-active:  !default;
+  $components--body--color-text-hover:  !default;
+  $components--body--color-text-hover-active:  !default;
+  $components--body--color-background:  !default;
+  $components--body--color-background-active:  !default;
+  $components--body--color-background-hover:  !default;
+  $components--body--color-background-hover-active:  !default;
+  $components--icon--color-text:  !default;
+  $components--icon--color-text-active:  !default;
+  $components--icon--color-text-hover:  !default;
+  $components--icon--color-text-hover-active:  !default;
+  $components--icon--color-background:  !default;
+  $components--icon--color-background-active:  !default;
+  $components--icon--color-background-hover:  !default;
+  $components--icon--color-background-hover-active:  !default;
 
-  //Default local variables:
+  // ** Default main variables
+  $accordion--body--color: $light-color !default;
+  $accordion--body--color-background: $dark-color !default;
+  $accordion--body--color-active: $dark-color !default;
+  $accordion--body--color-background-active: $light-color !default;
+
+  $accordion--icon--color-background: $light-color !default;
+  $accordion--icon--color-background-active: $active-light-color !default;
+
+  // ** Default local variables
   $accordion--icon--symbol: 'images/DefaultComponentsAssets/arrow.png' !default;
 
-  //Component body:
+  // * Component
+  // ** Main body
   @extend %transition;
   @extend .u-shadow-hover-click-effect;
   position: relative;
@@ -22,7 +57,7 @@
   border-radius: 50px;
   max-width: 340px;
 
-  background-color: $accordion--body--background-color;
+  background-color: $accordion--body--color-background;
   color: $accordion--body--color;
 
   //Accordion icon:
@@ -43,7 +78,7 @@
     background-position: center;
 
     background-repeat: no-repeat;
-    background-color: $accordion--icon--background-color;
+    background-color: $accordion--icon--color-background;
   }
 
   //Accordion hover:
@@ -58,19 +93,40 @@
 
   //Accordion active:
   &--active {
-    background-color: $accordion--body--active-background-color;
-    color: $accordion--body--active-color;
+    background-color: $accordion--body--color-background-active;
+    color: $accordion--body--color-active;
 
     //Accordion active icon:
     &::before {
       transform: translate(0, -50%) rotate(90deg);
-      background-color: $accordion--icon--active-background-color;
-    }
-
-    &:hover {
-      &::before {
-        // transform: translate(0, -50%) rotate(0deg);
-      }
+      background-color: $accordion--icon--color-background-active;
     }
   }
 }
+
+/* Html structure: 
+
+<h4 class="c-accordion c-accordion--active">
+  Heart Treatment
+</h4>
+<p>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
+  blanditiis eveniet mollitia error quos! Odio, perferendis
+  repellendus consequuntur possimus velit adipisci voluptatum
+  debitis hic pariatur.
+</p>
+<h4 class="c-accordion">Heart Treatment</h4>
+<p class="u-display-none">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+  maxime sed veritatis, sint deleniti corrupti aperiam nulla
+  vitae, odio tempore, laudantium blanditiis ut placeat.
+  Accusamus?
+</p>
+<h4 class="c-accordion">Heart Treatment</h4>
+<p class="u-display-none">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+  Suscipit fugiat enim dolores odit deserunt. Quod autem, aliquid
+  suscipit aliquam eum nihil a voluptatum porro quam!
+</p>
+
+*/

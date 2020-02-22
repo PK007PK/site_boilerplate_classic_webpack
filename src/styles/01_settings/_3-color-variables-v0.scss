@@ -15,10 +15,6 @@ $color-stellBlue: #506782;
 $color-grayBlack: #475055;
 $color-gplus: #ea6060;
 
-//Main body color:
-$main-body-color: $color-black;
-$main-body-background-color: $color-white;
-
 $colors: (
   'color-black': $color-black,
   'color-white': $color-white,
@@ -35,18 +31,46 @@ $colors: (
   'color-gplus': $color-gplus,
 );
 
-/**** Overwrite default variables: ****/
-/**** Default system variables: ****/
+// * Overwrite generic variables:
 
-/**** Overwrite components main variables: ****/
+// ** body
+// $body--body--color-background: white;
+// $body--body--color: $color-gray;
+
+// ** headings + u-heading
+// $headings--h1--color: inherit;
+// $headings--h2--color: inherit;
+// $headings--h3--color: inherit;
+// $headings--h4--color: inherit;
+
+// ** paragraph (p and u-txt-paragraph--primary);
+// $text--p--color: inherit;
+
+// * Overwrite utilities variables:
+
+// ** u-txt-component
+// $txt-component--text--color: inherit;
+
+// ** u-txt-logo
+// $txt-logo--text--color: inherit;
+
+// ** u-txt-navigation
+// $txt-navigation--text--color: inherit;
+
+// ** u-txt-paragraph--primary like generic p.
+
+// ** u-txt-paragraph--secondary
+// $txt-paragraph--sec--color: inherit;
+
+// * Overwrite components main variables:
 
 // ** c-accordion
-// $accordion--body--color: #eeeeee;
-// $accordion--body--background-color: #212121;
-// $accordion--body--active-color: black;
-// $accordion--body--active-background-color: #eeeeee;
-// $accordion--icon--background-color: #b4a6a6;
-// $accordion--icon--active-background-color: #df7878;
+// $accordion--body--color: $light-color !default;
+// $accordion--body--color-background: #212121 !default;
+// $accordion--body--color-active: $dark-color !default;
+// $accordion--body--color-background-active: $light-color !default;
+// $accordion--icon--color-background: $light-color !default;
+// $accordion--icon--color-background-active: $active-light-color !default;
 
 // ** c-btn
 // $btn--text--color: #ffffff;
@@ -78,3 +102,21 @@ $colors: (
 // $side-menu--icon--color: $dark-color !default;
 // $side-menu--icon--color-active: $active-dark-color !default;
 // $side-menu--icon--color-hover: $active-dark-color !default;
+
+// ** c-social-tile
+// $social-tile--body--color-background: $dark-color !default;
+// $social-tile--text--color: $light-color !default;
+
+// ** c-tabs
+// $tabs--button--color: $dark-color !default;
+// $tabs--button--color-hover: $light-color !default;
+// $tabs--button--color-active: $light-color !default;
+// $tabs--button--color-background: $active-light-color !default;
+// $tabs--button--color-background-hover: $medium-color !default;
+// $tabs--button--color-background-active: $medium-color !default;
+
+// $tabs--content--color: $dark-color !default;
+// $tabs--content--color-background: $light-color !default;
+
+// ** c-horizontal-bar
+// $horizontal-bar--body--color-background: $medium-color !default;

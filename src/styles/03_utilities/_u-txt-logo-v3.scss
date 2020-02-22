@@ -1,0 +1,28 @@
+// * Overwrite default values
+
+// * Default variables
+// ** Default main variables
+
+$txt-logo--text--color: inherit !default;
+$txt-logo--text--font-family: inherit !default;
+$txt-logo--text--font-size: inherit !default;
+$txt-logo--text--font-style: inherit !default;
+$txt-logo--text--font-weight: inherit !default;
+$txt-logo--text--letter-spacing: inherit !default;
+$txt-logo--text--line-height: inherit !default;
+$txt-logo--text--text-align: inherit !default;
+$txt-logo--text--text-transform: inherit !default;
+
+// * Component
+.u-txt-logo {
+  color: $txt-logo--text--color;
+  font-family: $txt-logo--text--font-family;
+  font-size: $txt-logo--text--font-size;
+  font-style: $txt-logo--text--font-style;
+  font-weight: $txt-logo--text--font-weight;
+  letter-spacing: $txt-logo--text--letter-spacing;
+  line-height: $txt-logo--text--line-height;
+  text-align: $txt-logo--text--text-align;
+  text-transform: $txt-logo--text--text-transform;
+  margin: 0;
+}

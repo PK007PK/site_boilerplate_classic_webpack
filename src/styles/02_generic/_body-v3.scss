@@ -1,0 +1,32 @@
+// * Overwrite default values
+
+// * Default variables
+// ** Default main variables
+$body--text--font-size: 1.6rem !default;
+$body--text--font-weight: 400 !default;
+$body--text--font-family: Arial !default;
+$body--body--color-background: white !default;
+$body--body--color: black !default;
+$body--body--max-wdth: 1600px !default;
+
+// ** Default local variables
+
+// ** Default effects
+
+// * Component
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $body--text--font-family;
+  font-size: $body--text--font-size;
+  font-weight: $body--text--font-weight;
+  color: $body--body--color;
+  background-color: $body--body--color-background;
+  max-width: $body--body--max-wdth;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}

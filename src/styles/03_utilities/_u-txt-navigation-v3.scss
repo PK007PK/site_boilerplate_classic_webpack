@@ -1,0 +1,28 @@
+// * Overwrite default values
+
+// * Default variables
+// ** Default main variables
+
+$txt-navigation--text--color: inherit !default;
+$txt-navigation--text--font-family: inherit !default;
+$txt-navigation--text--font-size: inherit !default;
+$txt-navigation--text--font-style: inherit !default;
+$txt-navigation--text--font-weight: inherit !default;
+$txt-navigation--text--letter-spacing: inherit !default;
+$txt-navigation--text--line-height: inherit !default;
+$txt-navigation--text--text-align: inherit !default;
+$txt-navigation--text--text-transform: inherit !default;
+
+// * Component
+.u-txt-navigation {
+  color: $txt-navigation--text--color;
+  font-family: $txt-navigation--text--font-family;
+  font-size: $txt-navigation--text--font-size;
+  font-style: $txt-navigation--text--font-style;
+  font-weight: $txt-navigation--text--font-weight;
+  letter-spacing: $txt-navigation--text--letter-spacing;
+  line-height: $txt-navigation--text--line-height;
+  text-align: $txt-navigation--text--text-align;
+  text-transform: $txt-navigation--text--text-transform;
+  margin: 0;
+}

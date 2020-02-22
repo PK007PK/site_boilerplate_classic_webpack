@@ -1,0 +1,30 @@
+// * Overwrite default values
+
+// * Default variables
+// ** Default main variables
+$text--p--color: inherit !default;
+$text--p--font-family: inherit !default;
+$text--p--font-size: inherit !default;
+$text--p--font-style: inherit !default;
+$text--p--font-weight: inherit !default;
+$text--p--letter-spacing: inherit !default;
+$text--p--text-align: inherit !default;
+$text--p--line-height: inherit !default;
+$text--p--text-transform: inherit !default;
+
+// ** Default local variables
+// ** Default effects
+
+// * Component
+p {
+  color: $text--p--color;
+  font-family: $text--p--font-family;
+  font-size: $text--p--font-size;
+  font-style: $text--p--font-style;
+  font-weight: $text--p--font-weight;
+  letter-spacing: $text--p--letter-spacing;
+  text-align: $text--p--text-align;
+  line-height: $text--p--line-height;
+  text-transform: $text--p--text-transform;
+  margin: 0;
+}

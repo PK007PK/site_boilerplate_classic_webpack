@@ -1,0 +1,27 @@
+// * Overwrite default values
+
+// * Default variables
+// ** Default main variables
+$txt-component--text--color: inherit !default;
+$txt-component--text--font-family: inherit !default;
+$txt-component--text--font-size: inherit !default;
+$txt-component--text--font-style: inherit !default;
+$txt-component--text--font-weight: inherit !default;
+$txt-component--text--letter-spacing: inherit !default;
+$txt-component--text--line-height: inherit !default;
+$txt-component--text--text-align: inherit !default;
+$txt-component--text--text-transform: inherit !default;
+
+// * Component
+.u-txt-component {
+  color: $txt-component--text--color;
+  font-family: $txt-component--text--font-family;
+  font-size: $txt-component--text--font-size;
+  font-style: $txt-component--text--font-style;
+  font-weight: $txt-component--text--font-weight;
+  letter-spacing: $txt-component--text--letter-spacing;
+  line-height: $txt-component--text--line-height;
+  text-align: $txt-component--text--text-align;
+  text-transform: $txt-component--text--text-transform;
+  margin: 0;
+}

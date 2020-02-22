@@ -1,0 +1,47 @@
+// It it like generic heading, but allow add styling to different tags.
+
+// * Overwrite default values
+
+// * Default variables
+// ** Default main variables
+
+// *** .u-paragraph-primary
+// Common variables with generic p
+
+// *** .u-paragraph-secondary
+$txt-paragraph--sec--color: inherit !default;
+$txt-paragraph--sec--font-family: inherit !default;
+$txt-paragraph--sec--font-size: inherit !default;
+$txt-paragraph--sec--font-style: inherit !default;
+$txt-paragraph--sec--font-weight: inherit !default;
+$txt-paragraph--sec--letter-spacing: inherit !default;
+$txt-paragraph--sec--line-height: inherit !default;
+$txt-paragraph--sec--text-align: inherit !default;
+$txt-paragraph--sec--text-transform: inherit !default;
+
+// * Component
+.u-txt-paragraph--primary {
+  color: $text--p--color;
+  font-family: $text--p--font-family;
+  font-size: $text--p--font-size;
+  font-style: $text--p--font-style;
+  font-weight: $text--p--font-weight;
+  letter-spacing: $text--p--letter-spacing;
+  line-height: $text--p--line-height;
+  text-align: $text--p--text-align;
+  text-transform: $text--p--text-transform;
+  margin: 0;
+}
+
+.u-txt-paragraph--secondary {
+  color: $txt-paragraph--sec--color;
+  font-family: $txt-paragraph--sec--font-family;
+  font-size: $txt-paragraph--sec--font-size;
+  font-style: $txt-paragraph--sec--font-style;
+  font-weight: $txt-paragraph--sec--font-weight;
+  letter-spacing: $txt-paragraph--sec--letter-spacing;
+  line-height: $txt-paragraph--sec--line-height;
+  text-align: $txt-paragraph--sec--text-align;
+  text-transform: $txt-paragraph--sec--text-transform;
+  margin: 0;
+}

@@ -1,0 +1,25 @@
+.c-horizontal-bar {
+  //Overwrite default values:
+
+  //Default main variables:
+  $light-color: #eceff1 !default;
+  $medium-color: #78909c !default;
+  $dark-color: #263238 !default;
+  $active-light-color: #c8e6c9 !default;
+  $active-dark-color: #2e7d32 !default;
+
+  $horizontal-bar--body--color-background: $medium-color !default;
+  $horizontal-bar--body--height: 4px !default;
+  $horizontal-bar--body--max-width: 64px !default;
+
+  //Default local variables:
+  $horizontal-bar--body--border-radious: 4px !default;
+
+  //Component body
+  display: block;
+  width: 100%;
+  max-width: $horizontal-bar--body--max-width;
+  height: $horizontal-bar--body--height;
+  border-radius: $horizontal-bar--body--border-radious;
+  background-color: $horizontal-bar--body--color-background;
+}

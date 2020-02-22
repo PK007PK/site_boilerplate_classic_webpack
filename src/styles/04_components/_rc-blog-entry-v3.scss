@@ -1,6 +1,13 @@
 .c-blog-entry {
   //Overwrite variables:
 
+  //Pocket color library
+  $light-color: #eceff1 !default;
+  $medium-color: #78909c !default;
+  $dark-color: #263238 !default;
+  $active-light-color: #c8e6c9 !default;
+  $active-dark-color: #2e7d32 !default;
+
   //Default main variables:
   $grid-base: 10px !default;
 

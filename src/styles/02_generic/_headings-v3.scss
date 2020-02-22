@@ -1,0 +1,99 @@
+// * Overwrite default values
+
+// * Default variables
+// ** Default main variables
+$headings--h1--color: inherit !default;
+$headings--h1--font-family: $primary-font !default;
+$headings--h1--font-size: 2.5rem !default;
+$headings--h1--font-style: normal !default;
+$headings--h1--font-weight: bold !default;
+$headings--h1--letter-spacing: inherit !default;
+$headings--h1--line-height: 1.5 !default;
+$headings--h1--text-transform: inherit !default;
+$headings--h1--text-align: inherit !default;
+
+$headings--h2--color: inherit !default;
+$headings--h2--font-family: $primary-font !default;
+$headings--h2--font-size: 2.2rem !default;
+$headings--h2--font-style: normal !default;
+$headings--h2--font-weight: bold !default;
+$headings--h2--letter-spacing: inherit !default;
+$headings--h2--line-height: 1.5 !default;
+$headings--h2--text-transform: inherit !default;
+$headings--h2--text-align: inherit !default;
+
+$headings--h3--color: inherit !default;
+$headings--h3--font-family: $primary-font !default;
+$headings--h3--font-size: 2rem !default;
+$headings--h3--font-style: normal !default;
+$headings--h3--font-weight: bold !default;
+$headings--h3--letter-spacing: inherit !default;
+$headings--h3--line-height: 1.5 !default;
+$headings--h3--text-transform: inherit !default;
+$headings--h3--text-align: inherit !default;
+
+$headings--h4--color: inherit !default;
+$headings--h4--font-family: $primary-font !default;
+$headings--h4--font-size: 1.8rem !default;
+$headings--h4--font-style: normal !default; //
+$headings--h4--text-transform: inherit !default; //
+$headings--h4--font-weight: bold !default;
+$headings--h4--letter-spacing: inherit !default;
+$headings--h4--line-height: 1.5 !default;
+$headings--h4--text-align: inherit !default;
+
+// ** Default local variables
+// ** Default effects
+
+// * Component
+h1 {
+  color: $headings--h1--color;
+  font-family: $headings--h1--font-family;
+  font-size: $headings--h1--font-size;
+  font-style: $headings--h1--font-style; //
+  font-weight: $headings--h1--font-weight;
+  letter-spacing: $headings--h1--letter-spacing;
+  line-height: $headings--h1--line-height;
+  text-align: $headings--h1--text-align;
+  text-transform: $headings--h1--text-transform;
+  margin: 0;
+}
+
+h2 {
+  color: $headings--h2--color;
+  font-family: $headings--h2--font-family;
+  font-size: $headings--h2--font-size;
+  font-style: $headings--h2--font-style;
+  font-weight: $headings--h2--font-weight;
+  letter-spacing: $headings--h2--letter-spacing;
+  line-height: $headings--h2--line-height;
+  text-align: $headings--h2--text-align;
+  text-transform: $headings--h2--text-transform;
+  margin: 0;
+}
+
+h3 {
+  color: $headings--h3--color;
+  font-family: $headings--h3--font-family;
+  font-size: $headings--h3--font-size;
+  font-style: $headings--h3--font-style;
+  font-weight: $headings--h3--font-weight;
+  letter-spacing: $headings--h3--letter-spacing;
+  line-height: $headings--h3--line-height;
+  text-align: $headings--h3--text-align;
+  text-transform: $headings--h3--text-transform;
+  margin: 0;
+}
+
+h4 {
+  color: $headings--h4--color;
+  font-family: $headings--h4--font-family;
+  font-size: $headings--h4--font-size;
+  font-style: $headings--h4--font-style;
+  font-weight: $headings--h4--font-weight;
+  letter-spacing: $headings--h4--letter-spacing;
+  line-height: $headings--h4--line-height;
+  text-align: $headings--h4--text-align;
+  text-transform: $headings--h4--text-transform;
+  margin: 0;
+}

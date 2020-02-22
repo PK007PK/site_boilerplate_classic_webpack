@@ -1,0 +1,130 @@
+.c-tabs {
+  //Overwrite variables
+
+  //Component default variables
+  $light-color: #eceff1;
+  $medium-color: #78909c;
+  $dark-color: #263238;
+  $active-light-color: #c8e6c9;
+  $active-dark-color: #2e7d32;
+
+  //Default main variables
+  $tabs--button--color: $light-color !default;
+  $tabs--button--color-hover: $light-color !default;
+  $tabs--button--color-active: $dark-color !default;
+  $tabs--button--color-background: $medium-color !default;
+  $tabs--button--color-background-hover: $medium-color !default;
+  $tabs--button--color-background-active: $light-color !default;
+
+  $tabs--content--color: $dark-color !default;
+  $tabs--content--color-background: $light-color !default;
+
+  //Default effects
+  $button-transition-style: 0.2s !default;
+
+  //Default local variables
+  $tabs--content--padding: 10px !default;
+  $tabs--border--style: 1px solid $dark-color !default;
+  $tabs--body--max-width: 100%;
+  $tabs--button--paddings: 15px 25px;
+
+  //Component body
+  width: 100%;
+  max-width: $tabs--body--max-width;
+  &__handler,
+  &__content-item {
+    display: none;
+  }
+
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+    li {
+      flex-basis: 120px;
+      flex-grow: 1;
+    }
+  }
+
+  &__nav-item {
+    display: block;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+
+    &:focus {
+      color: $tabs--button--color-active;
+    }
+
+    padding: $tabs--button--paddings;
+    border: $tabs--border--style;
+    border-bottom: 0;
+    color: $tabs--button--color;
+    background-color: $tabs--button--color-background;
+    transition: $button-transition-style;
+
+    &:hover {
+      color: $tabs--button--color-hover;
+      background-color: $tabs--button--color-background-hover;
+    }
+
+    &:active {
+      color: $tabs--button--color-active;
+      background-color: $tabs--button--color-background-active;
+    }
+
+    li:not(:last-child) & {
+      border-right-width: 0;
+    }
+  }
+
+  &__content {
+    clear: both;
+  }
+
+  &__content-item {
+    padding: $tabs--content--padding;
+    width: 100%;
+    border: $tabs--border--style;
+    color: $tabs--content--color;
+    background-color: $tabs--content--color-background;
+  }
+
+  #tab1:checked ~ .c-tabs__content .c-tabs__content-item--tab1,
+  #tab2:checked ~ .c-tabs__content .c-tabs__content-item--tab2,
+  #tab3:checked ~ .c-tabs__content .c-tabs__content-item--tab3,
+  #tab4:checked ~ .c-tabs__content .c-tabs__content-item--tab4,
+  #tab5:checked ~ .c-tabs__content .c-tabs__content-item--tab5 {
+    display: block;
+  }
+
+  #tab1:checked ~ nav .c-tabs__nav-item--1,
+  #tab2:checked ~ nav .c-tabs__nav-item--2,
+  #tab3:checked ~ nav .c-tabs__nav-item--3,
+  #tab4:checked ~ nav .c-tabs__nav-item--4,
+  #tab5:checked ~ nav .c-tabs__nav-item--5 {
+    color: $tabs--button--color-active;
+    background-color: $tabs--button--color-background-active;
+    position: relative;
+  }
+
+  #tab1:checked ~ nav .c-tabs__nav-item--1:after,
+  #tab2:checked ~ nav .c-tabs__nav-item--2:after,
+  #tab3:checked ~ nav .c-tabs__nav-item--3:after,
+  #tab4:checked ~ nav .c-tabs__nav-item--4:after,
+  #tab5:checked ~ nav .c-tabs__nav-item--5:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $tabs--button--color-background-active;
+    left: 0;
+    bottom: -1px;
+  }
+}
