@@ -53,7 +53,7 @@
     "normalize.css": "^8.0.1",
     "popper.js": "^1.14.3",
     "puppeteer": "^2.0.0",
-    "serialize-javascript": "^2.1.1",
+    "serialize-javascript": "^3.1.0",
     "url-loader": "^3.0.0"
   }
 }
